@@ -1,0 +1,91 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &__top-bar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+        height: 56px;
+        background-color: $mainColor;
+        font-size: 20px;
+        color: white;
+        box-shadow: 10px 5px 5px $hoverColor;
+        z-index: 20;
+    }
+
+    &__content {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    &__mail {
+        margin-left: 20px;
+    }
+
+    &__navigation {
+        max-width: 1200px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 80px;
+        background-image: url("./img/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__link {
+        font-size: 14px;
+        margin: 20px 16px;
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        white-space: nowrap;
+    }
+
+    &__button {
+        background: none;
+        border-radius: 20px;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 5px 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+        margin: 8px;
+    }
+
+    &__bookings {
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}

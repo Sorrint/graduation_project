@@ -1,0 +1,58 @@
+.sidebar {
+    grid-area: sidebar;
+    border-left: 2px solid $mainColor;
+    border-right: 2px solid $mainColor;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+
+    &__icon {
+        display: flex;
+    }
+    &__item {
+        stroke: #000000;
+    }
+
+    &__item.active {
+        background-color: $mainColor;
+        color: #ffffff;
+        stroke: #ffffff;
+        fill: #ffffff;
+    }
+    &__text {
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    &__link {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 5px;
+        font-size: 16px;
+        stroke: inherit;
+        stroke-width: 1.5;
+        align-items: center;
+    }
+
+    &__link:hover {
+        color: #ffffff;
+        animation-name: hover-fill;
+        animation-duration: 0.5s;
+        background-color: $hoverColor;
+        fill: #ffffff;
+        stroke: #ffffff;
+    }
+}
+
+@keyframes hover-fill {
+    from {
+        background-color: #ffffff;
+        stroke: #000000;
+        color: #000000;
+    }
+    100% {
+        background-color: $hoverColor;
+        fill: #ffffff;
+        color: #ffffff;
+        stroke: #ffffff;
+    }
+}

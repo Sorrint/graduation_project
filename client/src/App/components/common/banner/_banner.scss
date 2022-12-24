@@ -1,0 +1,163 @@
+.banner {
+    width: 100%;
+    height: 300px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+
+    &__filter {
+        content: "";
+        height: 300px;
+        background-color: rgba(58, 196, 250, 0.46);
+    }
+
+    &__title {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        content: "";
+
+        height: 100%;
+        margin: 0 0 0 350px;
+    }
+
+    &__text {
+        z-index: 20;
+        font-size: 60px;
+        color: white;
+        display: block;
+        text-shadow: rgba(6, 60, 54, 0.2) 4px 3px;
+    }
+
+    &_album {
+        width: 100%;
+        min-height: 300px;
+        background-image: url(./img/banner_album.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_about {
+        min-height: 300px;
+        background-image: url(./img/banner_about.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_contacts {
+        min-height: 300px;
+        background-image: url(./img/banner_contacts.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_news {
+        min-height: 300px;
+        background-image: url(./img/banner_news.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_rooms {
+        min-height: 300px;
+        background-image: url(./img/banner_rooms.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_services {
+        min-height: 300px;
+        background-image: url(./img/banner_services.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_luxe-11 {
+        min-height: 300px;
+        background-image: url(./img/luxe_11_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0% 60%;
+    }
+    &_luxe-16 {
+        min-height: 300px;
+        background-image: url(./img/luxe_16_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_luxe-12 {
+        min-height: 300px;
+        background-image: url(./img/luxe_12_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_luxe-14 {
+        min-height: 300px;
+        background-image: url(./img/luxe_14_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_luxe-15 {
+        min-height: 300px;
+        background-image: url(./img/luxe_15_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_comfort-6 {
+        min-height: 300px;
+        background-image: url(./img/comfort_6_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_comfort-7 {
+        min-height: 300px;
+        background-image: url(./img/comfort_7_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_comfort-9 {
+        min-height: 300px;
+        background-image: url(./img/comfort_9_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_econom-8 {
+        min-height: 300px;
+        background-image: url(./img/econom_8_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &_econom-5 {
+        min-height: 300px;
+        background-image: url(./img/econom_5_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.banner::before {
+    content: "";
+    width: 517px;
+    height: 166%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(23deg);
+    transform-origin: 100% 0;
+    background: #3ac4fa;
+}
+
+@media screen and (max-width: 1130px) {
+    .banner {
+        display: none;
+    }
+}

@@ -1,0 +1,67 @@
+.booking-info {
+    margin: 0 20px;
+    padding: 20px 0 20px 40px;
+    border-bottom: 1px solid $borderColor;
+    font-size: 20px;
+
+    &__link {
+        grid-area: "buttons";
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: bold;
+    }
+    &__room {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(1fr);
+        grid-template:
+            "image" "title"
+            "image" "description"
+            "image" "buttons";
+        align-items: center;
+    }
+    &__title {
+        padding-left: 15px;
+        grid-area: "title";
+        margin: 15px 0;
+        font-weight: bold;
+    }
+
+    &__description {
+        padding-left: 15px;
+        grid-area: "description";
+    }
+    &__image {
+        grid-area: "image";
+        grid-row-start: 1;
+        grid-row-end: 4;
+        width: 300px;
+        height: auto;
+    }
+    &__record {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+    }
+    &__delete {
+        margin-left: 25px;
+    }
+}
+
+.booking-info:last-child {
+    border-bottom: none;
+}
+
+@keyframes hover-button {
+    from {
+        background-color: $buttonColor;
+    }
+    100% {
+        background-color: $hoverColor;
+        box-shadow: 2px 2px 5px $borderColor;
+
+        color: #ffffff;
+    }
+}

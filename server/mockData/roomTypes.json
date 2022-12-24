@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "636e1e3da4244f6fd938ea00",
+        "name": "Люкс",
+        "value": "luxe"
+    },
+    {
+        "_id": "636e1e3da4244f6fd938ea01",
+        "name": "Комфорт",
+        "value": "comfort"
+    },
+    {
+        "_id": "636e1e3da4244f6fd938ea02",
+        "name": "Эконом",
+        "value": "econom"
+    }
+]

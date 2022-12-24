@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://admin:MyGraduationProject@sandbox.5izytlw.mongodb.net/?retryWrites=true&w=majority",
+    "accessSecret": "this is access key for my graduation project",
+    "refreshSecret": "this is my graduation project refresh key"
+}

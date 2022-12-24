@@ -1,0 +1,51 @@
+[
+    {
+        "_id": 1,
+        "image": "../../img/banner_album.jpg",
+        "path": "/album",
+        "name": "Фотоальбом",
+        "className": "_album"
+    },
+    {
+        "_id": 2,
+        "image": "../../img/banner_about.jpg",
+        "path": "/about",
+        "name": "О нас",
+        "className": "_about"
+    },
+    {
+        "_id": 3,
+        "image": "../../img/banner_contacts.jpg",
+        "path": "/contacts",
+        "name": "Контакты",
+        "className": "_contacts"
+    },
+    {
+        "_id": 4,
+        "image": "../../img/banner_news.jpg",
+        "path": "/news",
+        "name": "Новости и акции",
+        "className": "_news"
+    },
+    {
+        "_id": 5,
+        "image": "../../img/banner_rooms.jpg",
+        "path": "/rooms",
+        "name": "Номера отеля",
+        "className": "_rooms"
+    },
+    {
+        "_id": 6,
+        "image": "../../img/banner_services.jpg",
+        "path": "/services",
+        "name": "Услуги отеля",
+        "className": "_services"
+    },
+    {
+        "_id": 7,
+        "image": "../../img/banner_services.jpg",
+        "path": "/",
+        "name": "Главная",
+        "className": "_main"
+    }
+]

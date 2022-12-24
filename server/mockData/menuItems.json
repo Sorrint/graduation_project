@@ -1,0 +1,38 @@
+[
+    {
+        "name": "main",
+        "id": 1,
+        "path": "/",
+        "text": "Главная"
+    },
+    {
+        "name": "numbers",
+        "id": 2,
+        "path": "/rooms",
+        "text": "Номера"
+    },
+    {
+        "name": "services",
+        "id": 3,
+        "path": "/services",
+        "text": "Услуги"
+    },
+    {
+        "name": "about",
+        "id": 4,
+        "path": "/about",
+        "text": "О нас"
+    },
+    {
+        "name": "news",
+        "id": 5,
+        "path": "/news",
+        "text": "Новости и акции"
+    },
+    {
+        "name": "contacts",
+        "id": 6,
+        "path": "/contacts",
+        "text": "Контакты"
+    }
+]

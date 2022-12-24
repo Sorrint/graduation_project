@@ -1,0 +1,140 @@
+.popup {
+    &__booking {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        padding: 20px;
+        border-radius: 16px;
+        background-color: #fff;
+        z-index: 1;
+        font-size: 16px;
+    }
+
+    &__button-group {
+        padding: 10px;
+        align-self: flex-end;
+    }
+    &__booking-title {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+    &__booking-card {
+        font-size: 20px;
+    }
+
+    &__content {
+        min-height: 30vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 80vh;
+        position: relative;
+        padding: 10px;
+        background-color: #fff;
+        z-index: 1;
+        width: 550px;
+        font-size: 18px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__response-message {
+        min-height: 30vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 80vh;
+        position: relative;
+        padding: 10px;
+        background-color: #fff;
+        z-index: 1;
+        width: 550px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & p {
+            font-size: 16px;
+        }
+    }
+}
+.popover {
+    padding: 10px;
+    z-index: 1;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.cancel-button {
+    margin: 0 10px;
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: $deleteButtonColor;
+    font-weight: bold;
+    border: 2px solid $borderDeleteColor;
+}
+
+.cancel-button:hover {
+    animation-name: hover-delete-button;
+    animation-duration: 0.5s;
+    background-color: $deleteButtonColor;
+    box-shadow: 2px 2px 5px $borderDeleteColor;
+    color: #ffffff;
+}
+
+@keyframes hover-cancel-button {
+    from {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: $deleteButtonColor;
+        color: #ffffff;
+    }
+}
+
+.confirm-button {
+    margin: 0 10px;
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: $confirmButtonColor;
+    font-weight: bold;
+    border: 2px solid $borderConfirmColor;
+}
+
+.confirm-button:hover {
+    animation-name: hover-confirm-button;
+    animation-duration: 0.5s;
+    background-color: $confirmButtonColor;
+    box-shadow: 2px 2px 5px $borderConfirmColor;
+    color: #ffffff;
+}
+
+@keyframes hover-confirm-button {
+    from {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: $confirmButtonColor;
+        color: #ffffff;
+    }
+}
+
+.booking-card {
+    &__record {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+    }
+}

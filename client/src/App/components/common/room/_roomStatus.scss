@@ -1,0 +1,15 @@
+.room-status {
+    &__free {
+        padding: 10px 5px;
+        background-color: $confirmButtonColor;
+        border-radius: 10px;
+        color: #ffffff;
+    }
+
+    &__busy {
+        padding: 10px;
+        background-color: $deleteButtonColor;
+        border-radius: 10px;
+        color: #ffffff;
+    }
+}

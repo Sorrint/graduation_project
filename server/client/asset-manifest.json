@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.994ab846.css",
+    "main.js": "/static/js/main.939cc79e.js",
+    "static/media/banner_services.jpg": "/static/media/banner_services.1f1f4c245a6ba22bc393.jpg",
+    "static/media/banner_about.jpg": "/static/media/banner_about.55301ed0c48b80755d4b.jpg",
+    "static/media/banner_news.jpg": "/static/media/banner_news.edb0081fe59443c9bd2b.jpg",
+    "static/media/banner_rooms.jpg": "/static/media/banner_rooms.cbdc0aba2c4acd581867.jpg",
+    "static/media/banner_album.jpg": "/static/media/banner_album.dee82e0a1eccf9dd6aff.jpg",
+    "static/media/luxe_11_1.jpg": "/static/media/luxe_11_1.a209812835d601748246.jpg",
+    "static/media/luxe_15_1.jpg": "/static/media/luxe_15_1.d95507406ec09c9543a5.jpg",
+    "static/media/luxe_14_1.jpg": "/static/media/luxe_14_1.10182af74edef4e3ffdd.jpg",
+    "static/media/logo.png": "/static/media/logo.ae2320686eb038f7f82a.png",
+    "static/media/comfort_6_1.jpg": "/static/media/comfort_6_1.ec5ec56da1fb8f4960cb.jpg",
+    "static/media/comfort_7_1.jpg": "/static/media/comfort_7_1.e5c395d891b9f2b45b21.jpg",
+    "static/media/econom_8_1.jpg": "/static/media/econom_8_1.d03d8e3dcf4a3cd422a0.jpg",
+    "static/media/luxe_16_1.jpg": "/static/media/luxe_16_1.a02876040088b491dd84.jpg",
+    "static/media/bath.jpg": "/static/media/bath.e37588429b9b45945120.jpg",
+    "static/media/luxe_12_1.jpg": "/static/media/luxe_12_1.623929f519f50ac54506.jpg",
+    "static/media/econom_5_1.jpg": "/static/media/econom_5_1.31f9fdc43a4f2a9c8e2a.jpg",
+    "static/media/banner_contacts.jpg": "/static/media/banner_contacts.e8316a7e77133d9f4d64.jpg",
+    "static/media/comfort_9_1.jpg": "/static/media/comfort_9_1.d32f5bf1a82cbc2e63f0.jpg",
+    "static/media/Manrope.ttf": "/static/media/Manrope.95cc165789861324e025.ttf",
+    "static/media/OrchideaPro-Regular.ttf": "/static/media/OrchideaPro-Regular.0e67fa619a6c6d67dfe7.ttf",
+    "static/media/Railway.ttf": "/static/media/Railway.34cec37d2c829b6bc693.ttf",
+    "index.html": "/index.html",
+    "main.994ab846.css.map": "/static/css/main.994ab846.css.map",
+    "main.939cc79e.js.map": "/static/js/main.939cc79e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.994ab846.css",
+    "static/js/main.939cc79e.js"
+  ]
+}

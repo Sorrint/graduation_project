@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0;
+        font-size: 20px;
+    }
+    &__text {
+        padding: 0 5px;
+    }
+}
+
+.page-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    padding: 5px;
+
+    &.active {
+        font-weight: bold;
+        border: 1px solid black;
+    }
+}
+
+.page-link {
+    background-color: #ffffff;
+    font-weight: inherit;
+    font-size: inherit;
+}

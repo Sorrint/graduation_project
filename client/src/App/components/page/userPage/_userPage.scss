@@ -1,0 +1,63 @@
+.user-wrapper {
+    display: grid;
+    padding: 0 40px;
+    grid-template-areas: "sidebar" "content";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+
+    justify-content: center;
+    height: 100%;
+}
+
+.userpage-title {
+    font-size: 24px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.user-content {
+    grid-area: "content";
+}
+
+.user {
+    &__card {
+        display: flex;
+        font-size: 25px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+    }
+
+    &__avatar {
+        height: 150px;
+        width: 150px;
+        border: 2px solid #1e11a9;
+        border-radius: 15px;
+    }
+
+    &__edit {
+        align-self: flex-end;
+        padding-right: 80px;
+        z-index: 50;
+        stroke: #1e11a9;
+        stroke-width: 2;
+    }
+    &__email,
+    &__sex,
+    &__username {
+        margin: 25px 0;
+    }
+}
+
+.review__button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 20px;
+}

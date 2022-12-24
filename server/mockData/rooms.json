@@ -1,0 +1,473 @@
+[
+    {
+        "_id": "636f125b8e4fed3550ac8680",
+        "number": "11",
+        "type": "636e1e3da4244f6fd938ea00",
+        "name": "Люкс №11",
+        "title": "Люкс двухуровневый",
+        "priceList": { "2": 7000, "3": 8500, "4": 10000, "5": 11500, "6": 13000 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "70"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Кровать 'King size', две полутороспальные кровати"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "6" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "2" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Шикарные двухуровневые апартаменты",
+        "area": 70,
+        "countOfRooms": 2,
+        "maxNumberOfPersons": 6,
+        "booking": [],
+        "image": "../../img/luxe_11_1.jpg",
+        "className": "_luxe-11"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8681",
+        "number": "16",
+        "type": "636e1e3da4244f6fd938ea00",
+        "name": "Люкс №16",
+        "title": "ЛЮКС С БАЛКОНОМ и видом на Байкал",
+        "priceList": { "2": 6000, "3": 7500, "4": 9000, "5": 10500 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "60"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Кровать 'Queen size', две полутороспальные кровати"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "6" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "2" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Двухкомнатный «Люкс» №16 расположен на втором этаже корпуса №3",
+        "area": 60,
+        "countOfRooms": 2,
+        "maxNumberOfPersons": 5,
+        "booking": [],
+        "image": "../../img/luxe_16_1.jpg",
+        "className": "_luxe-16"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8682",
+        "number": "12",
+        "name": "Люкс №12",
+        "type": "636e1e3da4244f6fd938ea00",
+        "title": "ЛЮКС С КАМИНОМ",
+        "priceList": { "2": 6000, "3": 7500, "4": 9000 },
+        "description": "«Люкс» №12 с добротным камином расположен на первом этаже корпуса №3",
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "45"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Кровать 'Queen size', полутороспальная кровать"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "4" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "1" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "area": 45,
+        "countOfRooms": 2,
+        "maxNumberOfPersons": 4,
+        "booking": [],
+        "image": "../../img/luxe_12_1.jpg",
+        "className": "_luxe-12"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8683",
+        "number": "14",
+        "type": "636e1e3da4244f6fd938ea00",
+        "name": "Люкс №14",
+        "title": "ЛЮКС СЕМЕЙНЫЙ",
+        "priceList": { "2": 6000, "3": 7500, "4": 9000, "5": 10500 },
+        "description": "Двухкомнатный люкс 'Семейный' №14 на первом этаже корпуса №3",
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "60"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Кровать 'Queen size', две полутороспальные кровати"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "6" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "2" }
+        ],
+
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "area": 60,
+        "countOfRooms": 2,
+        "maxNumberOfPersons": 5,
+        "booking": [],
+        "image": "../../img/luxe_14_1.jpg",
+        "className": "_luxe-14"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8684",
+        "number": "15",
+        "type": "636e1e3da4244f6fd938ea00",
+        "name": "Люкс №15",
+        "title": "ЛЮКС С ВИДОМ НА БАЙКАЛ",
+        "priceList": { "2": 6000, "3": 7500, "4": 9000, "5": 10500 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "60"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Кровать 'Queen size', полутороспальная кровать"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "5" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "2" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Просторный «Люкс» №15 расположен на втором этаже корпуса №3",
+        "area": 60,
+        "countOfRooms": 2,
+        "maxNumberOfPersons": 5,
+        "booking": [],
+        "image": "../../img/luxe_15_1.jpg",
+        "className": "_luxe-15"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8685",
+        "number": "6",
+        "type": "636e1e3da4244f6fd938ea01",
+        "name": "Комфорт №6",
+        "title": "КОМФОРТ ТРЕХМЕСТНЫЙ",
+        "priceList": { "2": 5000, "3": 6500 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "24"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Двуспальная кровать, раскладной диван"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "3" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "1" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Номер 6 на первом этаже корпуса №1",
+        "area": 24,
+        "countOfRooms": 1,
+        "maxNumberOfPersons": 3,
+        "booking": [],
+        "image": "../../img/comfort_6_1.jpg",
+        "className": "_comfort-6"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8686",
+        "number": "7",
+        "type": "636e1e3da4244f6fd938ea01",
+        "name": "Комфорт №7",
+        "title": "КОМФОРТ ТРЕХМЕСТНЫЙ",
+        "priceList": { "2": 5000, "3": 6500 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "24"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Двуспальная кровать, раскладной диван"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "3" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "1" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Номер 7 на первом этаже корпуса №1",
+        "area": 24,
+        "countOfRooms": 1,
+        "maxNumberOfPersons": 3,
+        "booking": [],
+        "image": "../../img/comfort_7_1.jpg",
+        "className": "_comfort-7"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8687",
+        "number": "9",
+        "type": "636e1e3da4244f6fd938ea01",
+        "name": "Комфорт №9",
+        "title": "КОМФОРТ ЧЕТЫРЕХМЕСТНЫЙ",
+        "priceList": { "2": 5000, "3": 6500, "4": 8000 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "24"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Двуспальная кровать, односпальная кровать"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "4" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "1" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Номер 9 на втором этаже корпуса №1",
+        "area": 24,
+        "countOfRooms": 1,
+        "maxNumberOfPersons": 4,
+        "booking": [],
+        "image": "../../img/comfort_9_1.jpg",
+        "className": "_comfort-9"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8688",
+        "number": "8",
+        "type": "636e1e3da4244f6fd938ea02",
+        "name": "Эконом №8",
+        "title": "ЭКОНОМ",
+        "priceList": { "2": 3500 },
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "12"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Две односпальные кровати"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "2" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "1" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "description": "Номер 8 на втором этаже корпуса №3",
+        "area": 12,
+        "countOfRooms": 1,
+        "maxNumberOfPersons": 2,
+        "booking": [],
+        "image": "../../img/econom_8_1.jpg",
+        "className": "_econom-8"
+    },
+    {
+        "_id": "636f125b8e4fed3550ac8689",
+        "number": "5",
+        "type": "636e1e3da4244f6fd938ea02",
+        "name": "Эконом №5",
+        "title": "ЭКОНОМ ЛЕТНИЙ",
+        "properties": [
+            {
+                "name": "area",
+                "icon": "6353ba0ab0400a4ce0b2c100",
+                "value": "15"
+            },
+            {
+                "name": "bed",
+                "icon": "6353ba0ab0400a4ce0b2c101",
+                "value": "Две односпальные кровати"
+            },
+            { "name": "persons", "icon": "6353ba0ab0400a4ce0b2c102", "value": "3" },
+            { "name": "countOfRooms", "icon": "6353ba0ab0400a4ce0b2c099", "value": "1" }
+        ],
+        "amenities": [
+            "6353ba0ab0400a4ce0b2c103",
+            "6353ba0ab0400a4ce0b2c104",
+            "6353ba0ab0400a4ce0b2c105",
+            "6353ba0ab0400a4ce0b2c106",
+            "6353ba0ab0400a4ce0b2c107",
+            "6353ba0ab0400a4ce0b2c108",
+            "6353ba0ab0400a4ce0b2c109"
+        ],
+        "otherAmenities": [
+            "вешалка",
+            "тумбочка",
+            "комплект полотенец",
+            "мыло",
+            "розетка возле кровати",
+            "белье",
+            "сушилка"
+        ],
+        "priceList": { "2": 3500, "3": 5000 },
+        "description": "Номер 5 на втором этаже корпуса №1",
+        "area": 15,
+        "countOfRooms": 1,
+        "maxNumberOfPersons": 3,
+        "booking": [],
+        "image": "../../img/econom_5_1.jpg",
+        "className": "_econom-5"
+    }
+]
