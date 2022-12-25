@@ -2,14 +2,16 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import usePaginate from '../../../hooks/usePaginate';
-import { getUserBookings, removeBooking } from '../../../store/bookings';
+import { getBookingsLoadingStatus, getUserBookings, removeBooking } from '../../../store/bookings';
 import { updateRoomInfo } from '../../../store/rooms';
+import Loader from '../../common/loader';
 import Pagination from '../../common/pagination';
-import BookingRecord from '../../ui/booking/bookingRecord/record';
+import BookingRecord from '../../ui/booking/bookingRecord';
 
 const UserBookings = () => {
     const dispatch = useDispatch();
     const userBookings = useSelector(getUserBookings());
+    const bookingsLoading = useSelector(getBookingsLoadingStatus());
 
     const handleBookingRemove = (room, record) => {
         const updatedBookings = room.booking.filter((b) => b._id !== record._id);
@@ -21,6 +23,13 @@ const UserBookings = () => {
     const { itemsCrop, currentPage, currentPageSize, setCurrentPage, itemsList } = usePaginate(userBookings || []);
     const count = itemsList.length;
 
+    if (bookingsLoading) {
+        return (
+            <div className="content loader-content">
+                <Loader />
+            </div>
+        );
+    }
     if (itemsCrop) {
         return (
             <div className="userBookings">

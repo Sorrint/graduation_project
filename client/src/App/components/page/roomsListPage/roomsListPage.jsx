@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Banner from '../../common/banner/banner';
 import Footer from '../../common/footer';
-import Header from '../../common/header/header';
 import { useSelector } from 'react-redux';
-import { getRooms } from '../../../store/rooms';
+import { getRooms, getRoomsLoadingStatus } from '../../../store/rooms';
 import { getRoomTypes } from '../../../store/roomTypes';
 import RoomImage from '../../common/room/roomImage';
 import RoomCard from '../../ui/room/roomCard';
 import RoomCardText from '../../common/room/roomCardText';
-import RoomCardPrice from '../../ui/room/roomCardPrice';
+import RoomCardPrice from '../../common/room/roomCardPrice';
 import { Link } from 'react-router-dom';
+import Header from '../../ui/header';
+import Banner from '../../ui/banner';
+import Loader from '../../common/loader';
 
 const RoomsListPage = () => {
     const rooms = useSelector(getRooms());
+    const roomsStatusLoading = useSelector(getRoomsLoadingStatus());
     const types = useSelector(getRoomTypes());
     const [selectedType, setSelectedType] = useState();
     const handleTypeSelect = (type) => {
@@ -62,6 +64,8 @@ const RoomsListPage = () => {
             )
         }
     };
+
+    if (roomsStatusLoading) return <Loader />;
 
     if (types) {
         return (

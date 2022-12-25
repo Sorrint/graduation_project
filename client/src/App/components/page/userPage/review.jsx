@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewForm from '../../common/reviews/reviewForm';
+import ReviewForm from '../../ui/forms/reviewForm';
 const Review = () => {
     return (
         <div className="admin-panel">

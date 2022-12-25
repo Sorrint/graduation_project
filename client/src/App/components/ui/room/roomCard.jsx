@@ -8,7 +8,7 @@ const RoomCard = ({ options, data, wrapperName }) => {
     const isHovering = useHover(ref);
     useEffect(() => {
         if (wrapperName !== 'room-info') {
-            ref.current.style.boxShadow = isHovering ? '10px 5px 5px #8ac4fa' : '';
+            ref.current.style.boxShadow = isHovering ? '0 0 5px 2px #3ac4fa' : '';
             ref.current.style.scale = isHovering ? '1.05' : '1';
         }
     }, [isHovering]);

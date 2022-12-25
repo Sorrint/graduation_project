@@ -9,6 +9,12 @@
     height: 100%;
 }
 
+.loader-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .userpage-title {
     font-size: 24px;
     padding: 20px;

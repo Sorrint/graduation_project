@@ -28,10 +28,12 @@
 }
 
 .form-select__roomTypes {
+    background-color: #fff;
     font-size: 16px;
     font-family: "Orchidea", sans-serif;
-    background-color: #eee;
     padding: 12px 0 12px 15px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 5px;
 }
 
 .pricelist {

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BookingDate from './bookingDate';
+import BookingDate from '../../common/booking/bookingDate';
 import RenderGuests from '../../common/booking/bookingFields/guests';
 import RenderNights from '../../common/booking/bookingFields/nights';
 import RenderPrice from '../../common/booking/bookingFields/price';
-import RecordRow from './bookingRecord/recordRow';
 import { useSelector } from 'react-redux';
 import { getRoomById } from '../../../store/rooms';
+import RecordRow from '../../common/booking/bookingConfirm/recordRow';
 
 const ConfirmBookingDialog = ({ data, onCancel, onConfirm, setRef }) => {
     const room = useSelector(getRoomById(data.choosenNumber));

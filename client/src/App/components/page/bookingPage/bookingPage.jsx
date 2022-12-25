@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getToday, getTomorrow } from '../../../utils/utils';
-import BookingPanel from '../../common/bookingPanel';
-import Header from '../../common/header/header';
+import BookingPanel from '../../ui/booking/bookingPanel';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRoomTypes, getRoomTypesLoadingStatus } from '../../../store/roomTypes';
 import { getRooms, getRoomsLoadingStatus, loadRoomsList } from '../../../store/rooms';
@@ -12,8 +11,9 @@ import { createBooking } from '../../../store/bookings';
 import BookingCards from '../../ui/booking/bookingCards';
 import OverlayingPopup from '../../common/portal/overlayingPopup';
 import ConfirmBookingDialog from '../../ui/booking/confirmBooking';
-import Loader from '../../common/portal/loader';
-import { getIconId } from '../../../store/icons';
+import { getIconId, getIconsLoadingStatus } from '../../../store/icons';
+import Header from '../../ui/header';
+import Loader from '../../common/loader';
 
 const initialData = {
     bookingRange: [getToday(), getTomorrow()],
@@ -45,6 +45,7 @@ const BookingPage = () => {
     const rooms = useSelector(getRooms());
     const roomsStatusLoading = useSelector(getRoomsLoadingStatus());
     const roomTypesLoading = useSelector(getRoomTypesLoadingStatus());
+    const iconsStatusLoading = useSelector(getIconsLoadingStatus());
 
     const viewOnLakeId = useSelector(getIconId('landscape'));
     const currentUser = useSelector(getCurrentUserData());
@@ -119,7 +120,7 @@ const BookingPage = () => {
     const loadUpdatedRooms = () => {
         dispatch(loadRoomsList());
     };
-    if (roomsStatusLoading || roomTypesLoading) return <Loader />;
+    if (roomsStatusLoading || roomTypesLoading || iconsStatusLoading) return <Loader />;
     if (data && rooms) {
         const filteredRooms = filterRooms(rooms, data);
 

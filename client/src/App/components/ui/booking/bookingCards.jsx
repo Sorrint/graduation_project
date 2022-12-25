@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RoomCard from '../room/roomCard';
 import RoomImage from '../../common/room/roomImage';
 import RoomCardText from '../../common/room/roomCardText';
-import PropertiesList from '../room/properties/propertiesList';
+import PropertiesList from '../room/propertiesList';
 import { getIcons } from '../../../store/icons';
 import { useSelector } from 'react-redux';
 import { addTextToProperties, renderGuests } from '../../../utils/utils';
@@ -73,11 +73,13 @@ const BookingCards = ({ rooms, data, onChange, onClick }) => {
     };
     return (
         <div className="booking-cards">
-            {bookingsList.length === 0
-                ? 'нет подходящих номеров'
-                : bookingsList.map((room) => (
-                      <RoomCard options={roomCardOptions} data={room} wrapperName="booking-card" key={room._id} />
-                  ))}
+            {bookingsList.length === 0 ? (
+                <div className="booking-cards__message">{'нет подходящих номеров'}</div>
+            ) : (
+                bookingsList.map((room) => (
+                    <RoomCard options={roomCardOptions} data={room} wrapperName="booking-card" key={room._id} />
+                ))
+            )}
         </div>
     );
 };

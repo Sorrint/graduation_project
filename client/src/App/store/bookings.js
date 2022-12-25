@@ -1,6 +1,5 @@
 import { createAction, createSlice } from '@reduxjs/toolkit';
 import bookingService from '../services/booking.service';
-// import { loadRoomsList } from './rooms';
 
 const bookingSlice = createSlice({
     name: 'bookings',
@@ -84,7 +83,6 @@ export const createBooking = (payload) => async (dispatch) => {
         const data = await bookingService.create(payload);
         const { newBooking } = data;
         dispatch(bookingCreated(newBooking));
-        // dispatch(loadRoomsList());
     } catch (error) {
         dispatch(createBookingFailed(error.message));
     }

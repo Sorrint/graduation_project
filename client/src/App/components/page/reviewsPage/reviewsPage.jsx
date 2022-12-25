@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import usePaginate from '../../../hooks/usePaginate';
 import { getReviews, getReviewsLoadingStatus, removeReview } from '../../../store/review';
 import Footer from '../../common/footer';
-import Header from '../../common/header/header';
+import Loader from '../../common/loader';
 import Pagination from '../../common/pagination';
-import Loader from '../../common/portal/loader';
-import ReviewsList from '../../common/reviews/reviewsList';
+import Header from '../../ui/header';
+import ReviewsList from '../../ui/reviewsList';
 const ReviewsPage = () => {
     const dispatch = useDispatch();
     const reviews = useSelector(getReviews());

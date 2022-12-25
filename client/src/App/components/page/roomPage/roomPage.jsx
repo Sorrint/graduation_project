@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Banner from '../../common/banner/banner';
 import Footer from '../../common/footer';
-import Header from '../../common/header/header';
 import RoomAmenities from '../../ui/room/roomAmenities';
 import { addTextToProperties } from '../../../utils/utils';
 import { useSelector } from 'react-redux';
 import { getRoomById } from '../../../store/rooms';
 import { getIcons } from '../../../store/icons';
 import { Link } from 'react-router-dom';
-import PropertiesList from '../../ui/room/properties/propertiesList';
+import PropertiesList from '../../ui/room/propertiesList';
 import RoomCard from '../../ui/room/roomCard';
 import RoomImage from '../../common/room/roomImage';
 import RoomCardText from '../../common/room/roomCardText';
-import RoomCardPrice from '../../ui/room/roomCardPrice';
+import RoomCardPrice from '../../common/room/roomCardPrice';
+import Header from '../../ui/header';
+import Banner from '../../ui/banner';
 const RoomPage = ({ id }) => {
     const icons = useSelector(getIcons());
     const room = useSelector(getRoomById(id));

@@ -50,7 +50,7 @@ export const createReview =
                 ...payload,
                 user: userId
             };
-            const { content } = await reviewService.createReview(review);
+            const content = await reviewService.createReview(review);
             dispatch(reviewCreated(content));
         } catch (error) {
             dispatch(createReviewFailed(error.message));

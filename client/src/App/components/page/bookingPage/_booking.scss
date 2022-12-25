@@ -1,6 +1,19 @@
 .booking-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    &__message {
+        // display: flex;
+        width: 100%;
+        // align-items: center;
+        // justify-content: center;
+        // justify-items: center;
+        grid-column-start: 3;
+        padding: 20px;
+        font-size: 20px;
+        color: $deleteButtonColor;
+        font-weight: bold;
+    }
 }
 
 .booking-card {

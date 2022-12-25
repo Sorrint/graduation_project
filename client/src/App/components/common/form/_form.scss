@@ -17,18 +17,25 @@
         word-wrap: normal;
     }
     &__input {
-        background-color: #eee;
+        background-color: #fff;
         font-family: "Orchidea", sans-serif;
 
-        border: none;
+        border-radius: 5px;
+        border: 1px solid rgb(165, 165, 165);
         padding: 12px 0px 12px 15px;
         font-size: 16px;
         resize: none;
+
+        &.is-invalid {
+            box-shadow: 0 0 5px 2px $deleteButtonColor;
+        }
     }
     &__password-button {
-        background-color: #eee;
+        background-color: #fff;
+        border: none;
         height: 100%;
         width: 2rem;
+        opacity: 1;
     }
     &__icon {
         stroke: black;
@@ -67,6 +74,17 @@
     }
 }
 
+.error-message {
+    font-size: 18px;
+    padding: 5px 0;
+    color: $borderDeleteColor;
+    font-weight: bold;
+}
+.avatar-button {
+    background-color: rgba(56, 195, 250, 0.7);
+    border-radius: 3px;
+}
+
 .radio-container {
     font-size: 16px;
     display: grid;
@@ -97,7 +115,10 @@
 }
 
 .invalid-feedback {
+    padding: 5px 0;
     font-size: 14px;
+    font-weight: bold;
+    color: $borderDeleteColor;
     grid-area: error;
     grid-column-start: 2;
     grid-column-end: 3;

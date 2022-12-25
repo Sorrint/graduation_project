@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RenderPrice from '../../common/booking/bookingFields/price';
 import Table from '../../common/table/table';
 import { updateRoomInfo } from '../../../store/rooms';
-import BookingDate from './bookingDate';
+import BookingDate from '../../common/booking/bookingDate';
 import RenderGuests from '../../common/booking/bookingFields/guests';
 import RenderNights from '../../common/booking/bookingFields/nights';
 import _ from 'lodash';

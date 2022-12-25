@@ -5,11 +5,11 @@ import { getRooms, getRoomsLoadingStatus } from '../../../store/rooms';
 import { getUsersList, getUsersLoadingStatus } from '../../../store/users';
 
 import BookingsTable from '../../ui/booking/bookingsTable';
-import BookingsTableSettings from '../../ui/bookingsTableSettings';
+import BookingsTableSettings from '../../ui/booking/bookingsTableSettings';
 import qs from 'query-string';
-import Loader from '../../common/portal/loader';
 import usePaginate from '../../../hooks/usePaginate';
 import Pagination from '../../common/pagination';
+import Loader from '../../common/loader';
 
 const BookingsList = () => {
     const [selectedUser, setSelectedUser] = useState();
@@ -46,7 +46,13 @@ const BookingsList = () => {
     const count = filteredBookings.length;
     const { itemsCrop, currentPage, currentPageSize, setCurrentPage } = usePaginate(filteredBookings || []);
 
-    if (bookingsLoading || usersLoading || roomsLoading) return <Loader />;
+    if (bookingsLoading || usersLoading || roomsLoading) {
+        return (
+            <div className="content loader-content">
+                <Loader />
+            </div>
+        );
+    }
     return (
         <div className="admin-panel">
             <h1 className="admin-panel__title">Список бронирований</h1>

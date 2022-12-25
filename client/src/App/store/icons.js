@@ -40,7 +40,6 @@ export const loadIconsList = () => async (dispatch) => {
 export const getIconsLoadingStatus = () => (state) => state.icons.isLoading;
 export const getIcons = () => (state) => state.icons.entities;
 export const getIconId = (name) => (state) => {
-    // return state;
     const icon = state.icons.entities ? state.icons.entities.find((icon) => icon.name === name) : null;
     if (icon) return icon._id;
     return null;

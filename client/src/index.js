@@ -18,5 +18,3 @@ root.render(
         </Router>
     </Provider>
 );
-
-// reportWebVitals();

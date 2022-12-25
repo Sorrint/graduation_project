@@ -92,23 +92,28 @@ h6 {
 /*----------------------------------------*/
 @font-face {
   font-family: "Manrope";
-  src: url("./fonts/Manrope.ttf") format("truetype");
+  src: url("../public/fonts/Manrope.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Railway";
-  src: url("./fonts/Railway.ttf") format("truetype");
+  src: url("../public/fonts/Railway.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Orchidea";
-  src: url("./fonts/OrchideaPro-Regular.ttf") format("truetype");
+  src: url("../public/fonts/OrchideaPro-Regular.ttf") format("truetype");
 }
 
 body {
   height: 100%;
   overflow: auto;
   font-family: "Orchidea", sans-serif;
+}
+
+input:focus {
+  -webkit-box-shadow: 0 0 5px 2px #3ac4fa;
+          box-shadow: 0 0 5px 2px #3ac4fa;
 }
 
 #root {
@@ -191,6 +196,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .content p {
@@ -502,7 +508,7 @@ body {
 .header__logo {
   width: 100%;
   height: 80px;
-  background-image: url("./img/logo.png");
+  background-image: url("../public/img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -578,49 +584,49 @@ body {
 .banner_album {
   width: 100%;
   min-height: 300px;
-  background-image: url(./img/banner_album.jpg);
+  background-image: url(../public/img/banner_album.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_about {
   min-height: 300px;
-  background-image: url(./img/banner_about.jpg);
+  background-image: url(../public/img/banner_about.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_contacts {
   min-height: 300px;
-  background-image: url(./img/banner_contacts.jpg);
+  background-image: url(../public/img/banner_contacts.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_news {
   min-height: 300px;
-  background-image: url(./img/banner_news.jpg);
+  background-image: url(../public/img/banner_news.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_rooms {
   min-height: 300px;
-  background-image: url(./img/banner_rooms.jpg);
+  background-image: url(../public/img/banner_rooms.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_services {
   min-height: 300px;
-  background-image: url(./img/banner_services.jpg);
+  background-image: url(../public/img/banner_services.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_luxe-11 {
   min-height: 300px;
-  background-image: url(./img/luxe_11_1.jpg);
+  background-image: url(../public/img/luxe_11_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 60%;
@@ -628,65 +634,74 @@ body {
 
 .banner_luxe-16 {
   min-height: 300px;
-  background-image: url(./img/luxe_16_1.jpg);
+  background-image: url(../public/img/luxe_16_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 60%;
 }
 
 .banner_luxe-12 {
   min-height: 300px;
-  background-image: url(./img/luxe_12_1.jpg);
+  background-image: url(../public/img/luxe_12_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 50%;
 }
 
 .banner_luxe-14 {
   min-height: 300px;
-  background-image: url(./img/luxe_14_1.jpg);
+  background-image: url(../public/img/luxe_14_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 50%;
 }
 
 .banner_luxe-15 {
   min-height: 300px;
-  background-image: url(./img/luxe_15_1.jpg);
+  background-image: url(../public/img/luxe_15_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 50%;
 }
 
 .banner_comfort-6 {
   min-height: 300px;
-  background-image: url(./img/comfort_6_1.jpg);
+  background-image: url(../public/img/comfort_6_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 60%;
 }
 
 .banner_comfort-7 {
   min-height: 300px;
-  background-image: url(./img/comfort_7_1.jpg);
+  background-image: url(../public/img/comfort_7_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 40%;
 }
 
 .banner_comfort-9 {
   min-height: 300px;
-  background-image: url(./img/comfort_9_1.jpg);
+  background-image: url(../public/img/comfort_9_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 40%;
 }
 
 .banner_econom-8 {
   min-height: 300px;
-  background-image: url(./img/econom_8_1.jpg);
+  background-image: url(../public/img/econom_8_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 65%;
 }
 
 .banner_econom-5 {
   min-height: 300px;
-  background-image: url(./img/econom_5_1.jpg);
+  background-image: url(../public/img/econom_5_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0% 80%;
 }
 
 .banner::before {
@@ -719,7 +734,7 @@ body {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
   background-repeat: no-repeat;
-  background-image: url(./img/bath.jpg);
+  background-image: url(../public/img/bath.jpg);
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -811,6 +826,7 @@ button {
   font-weight: bold;
   text-align: center;
   overflow: hidden;
+  border-radius: 10px;
   padding-bottom: 20px;
   font-family: "Orchidea", serif;
   font-size: 18px;
@@ -1040,6 +1056,16 @@ button {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+}
+
+.booking-cards__message {
+  width: 100%;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  padding: 20px;
+  font-size: 20px;
+  color: #f54545;
+  font-weight: bold;
 }
 
 .booking-card {
@@ -1341,6 +1367,23 @@ button:focus {
   margin: 8px 0;
 }
 
+.form-container__button_disabled {
+  border-radius: 20px;
+  border: 1px solid #1e11a9;
+  background-color: #eee;
+  color: #1e11a9;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 80ms ease-in;
+  transition: -webkit-transform 80ms ease-in;
+  transition: transform 80ms ease-in;
+  transition: transform 80ms ease-in, -webkit-transform 80ms ease-in;
+  margin: 8px 0;
+}
+
 .form-container__title {
   font-weight: bold;
   margin: 10px 0;
@@ -1540,18 +1583,26 @@ button:focus {
 }
 
 .input-container__input {
-  background-color: #eee;
+  background-color: #fff;
   font-family: "Orchidea", sans-serif;
-  border: none;
+  border-radius: 5px;
+  border: 1px solid #a5a5a5;
   padding: 12px 0px 12px 15px;
   font-size: 16px;
   resize: none;
 }
 
+.input-container__input.is-invalid {
+  -webkit-box-shadow: 0 0 5px 2px #f54545;
+          box-shadow: 0 0 5px 2px #f54545;
+}
+
 .input-container__password-button {
-  background-color: #eee;
+  background-color: #fff;
+  border: none;
   height: 100%;
   width: 2rem;
+  opacity: 1;
 }
 
 .input-container__icon {
@@ -1597,6 +1648,18 @@ button:focus {
 
 .avatar-container__input {
   display: none;
+}
+
+.error-message {
+  font-size: 18px;
+  padding: 5px 0;
+  color: #ff0000c9;
+  font-weight: bold;
+}
+
+.avatar-button {
+  background-color: rgba(56, 195, 250, 0.7);
+  border-radius: 3px;
 }
 
 .radio-container {
@@ -1649,7 +1712,10 @@ button:focus {
 }
 
 .invalid-feedback {
+  padding: 5px 0;
   font-size: 14px;
+  font-weight: bold;
+  color: #ff0000c9;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -1732,6 +1798,18 @@ button:focus {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+}
+
+.loader-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .userpage-title {
@@ -2459,10 +2537,12 @@ button:focus {
 }
 
 .form-select__roomTypes {
+  background-color: #fff;
   font-size: 16px;
   font-family: "Orchidea", sans-serif;
-  background-color: #eee;
   padding: 12px 0 12px 15px;
+  border: 1px solid #a5a5a5;
+  border-radius: 5px;
 }
 
 .pricelist__container {
@@ -2595,6 +2675,10 @@ button:focus {
   margin: 0;
 }
 
+.review__container {
+  width: 40vw;
+}
+
 .message {
   height: 150px;
   padding: 10px;
@@ -2660,6 +2744,12 @@ button:focus {
 }
 
 .pagination__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 5px;
 }
 

@@ -9,13 +9,13 @@ import MainPage from './components/page/mainPage';
 import NewsPage from './components/page/newsPage';
 import Services from './components/page/servicesPage';
 
-import EditUserData from './components/ui/editUserData';
-import UserProfile from './components/ui/userProfile';
+import UserProfile from './components/page/userPage/userProfile';
 import BookingsList from './components/page/userPage/bookingsList';
-import AdminPanel from './components/page/userPage/adminPanel';
 import ReviewsPage from './components/page/reviewsPage';
 import Review from './components/page/userPage/review';
 import UserBookings from './components/page/userPage/userBookings';
+import RoomsList from './components/page/userPage/roomsList';
+import EditUserData from './components/ui/forms/editUserData';
 
 export const publicRoutes = [
     { path: '/', name: 'Main Page', component: MainPage, exact: true },
@@ -23,7 +23,6 @@ export const publicRoutes = [
     { path: '/booking', name: 'Booking', component: Rooms, protected: true },
     { path: '/logout', name: 'LogOut', component: LogOut },
     { path: '/login', name: 'Login', component: LoginPage },
-    { path: '/adminPanel', name: 'AdminPanel', component: AdminPanel },
     { path: '/about', name: 'About', component: AboutPage },
     { path: '/services', name: 'Services', component: Services },
     { path: '/news', name: 'News', component: NewsPage },
@@ -48,7 +47,7 @@ export const userRoutes = [
     {
         pathname: '/roomsList',
         name: 'roomsList',
-        component: AdminPanel,
+        component: RoomsList,
         protected: true,
         condition: 'isAdmin',
         redirect: '/profile'

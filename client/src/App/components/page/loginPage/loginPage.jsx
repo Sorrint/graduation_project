@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+
 import Footer from '../../common/footer';
-import LoginForm from '../../common/form/loginForm';
 import OverlayLogin from '../../common/form/overlayLogin';
-import RegisterForm from '../../common/form/registerForm';
-import Header from '../../common/header/header';
+import LoginForm from '../../ui/forms/loginForm';
+import RegisterForm from '../../ui/forms/registerForm';
+import Header from '../../ui/header';
 
 const LoginPage = () => {
     const [formType, setFormType] = useState('login-form');

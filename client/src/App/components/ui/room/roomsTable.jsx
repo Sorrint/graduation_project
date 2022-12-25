@@ -10,7 +10,7 @@ import RoomStatus from '../../common/room/roomStatus';
 import RoomEditIcon from '../../common/room/roomEditIcon';
 import _ from 'lodash';
 import { getRoomTypeById } from '../../../store/roomTypes';
-import Loader from '../../common/portal/loader';
+import Loader from '../../common/loader';
 
 const RoomsTable = ({ onSelect, rooms, sortBy, setSortBy, currentUserId }) => {
     const handleSort = (item) => {

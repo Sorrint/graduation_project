@@ -74,17 +74,23 @@ const {
 const userUpdateRequested = createAction('users/userUpdateRequested');
 const updateUserFailed = createAction('users/updateUserFailed');
 
-export const signUp = (userData) => async (dispatch) => {
-    dispatch(authRequested());
-    try {
-        const data = await authService.register(userData);
-        localStorageService.setTokens(data);
-        dispatch(authRequestSuccess({ userId: data.userId }));
-        history.push('/');
-    } catch (error) {
-        dispatch(authRequestFailed(error.response.data.message));
-    }
-};
+export const signUp =
+    ({ payload, setApiError }) =>
+    async (dispatch) => {
+        dispatch(authRequested());
+        try {
+            const data = await authService.register(payload);
+            localStorageService.setTokens(data);
+            dispatch(authRequestSuccess({ userId: data.userId }));
+            history.push('/');
+            setApiError('');
+        } catch (error) {
+            if (error.response.status === 400) {
+                setApiError(error.response.data.message);
+            }
+            dispatch(authRequestFailed(error.response.data.message));
+        }
+    };
 
 export const updateUserData = (payload) => async (dispatch) => {
     dispatch(userUpdateRequested());
@@ -98,19 +104,21 @@ export const updateUserData = (payload) => async (dispatch) => {
 };
 
 export const login =
-    ({ payload, redirect, setError }) =>
+    ({ payload, redirect, setApiError }) =>
     async (dispatch) => {
         const { email, password } = payload;
         dispatch(authRequested());
         try {
-            const data = await authService.login({ email, password, setError });
+            const data = await authService.login({ email, password });
             localStorageService.setTokens(data);
             const isAdmin = data.roles.findIndex((r) => r === 'admin');
-            Number(isAdmin) === -1 ? localStorageService.setRole('user') : localStorageService.setRole('admin');
-            dispatch(authRequestSuccess({ userId: data.userId }));
+            const role = Number(isAdmin) === -1 ? 'user' : 'admin';
+            localStorageService.setRole(role);
+            dispatch(authRequestSuccess({ userId: data.userId, userRole: role }));
+            setApiError('');
             history.push(redirect);
         } catch (error) {
-            setError('apiError', { message: 'Ошибка входа в систему' });
+            setApiError('Ошибка входа в систему');
             dispatch(authRequestFailed(error.message));
         }
     };

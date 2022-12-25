@@ -1,7 +1,8 @@
 import React from 'react';
 import Footer from '../../common/footer';
-import Header from '../../common/header/header';
-import Banner from '../../common/banner/banner';
+import Banner from '../../ui/banner';
+import Header from '../../ui/header';
+
 const ContactsPage = () => {
     return (
         <>

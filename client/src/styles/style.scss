@@ -11,17 +11,17 @@ $borderConfirmColor: #0ca60c;
 
 @font-face {
     font-family: "Manrope";
-    src: url("./fonts/Manrope.ttf") format("truetype");
+    src: url("../public/fonts/Manrope.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Railway";
-    src: url("./fonts/Railway.ttf") format("truetype");
+    src: url("../public/fonts/Railway.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Orchidea";
-    src: url("./fonts/OrchideaPro-Regular.ttf") format("truetype");
+    src: url("../public/fonts/OrchideaPro-Regular.ttf") format("truetype");
 }
 
 body {
@@ -30,6 +30,10 @@ body {
     overflow: auto;
 
     font-family: "Orchidea", sans-serif;
+}
+
+input:focus {
+    box-shadow: 0 0 5px 2px $mainColor;
 }
 
 #root {
@@ -92,6 +96,7 @@ body {
     max-width: 1400px;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 20px;
 
     p {
         padding: 40px;

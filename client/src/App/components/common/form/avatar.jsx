@@ -31,7 +31,9 @@ const Avatar = ({ name, label, value, register, setValue }) => {
                         className="avatar-container__input"
                         {...register(name)}
                     />
-                    <button onClick={changeAvatar}>Сменить аватар</button>
+                    <button className="avatar-button" onClick={changeAvatar}>
+                        Сменить аватар
+                    </button>
                 </div>
             </div>
         );
