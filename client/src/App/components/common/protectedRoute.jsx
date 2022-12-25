@@ -6,7 +6,7 @@ import { Redirect, Route } from 'react-router-dom';
 
 const ProtectedRoute = ({ component: Component, children, condition = 'isLoggedIn', pathname = '/login', ...rest }) => {
     const isLoggedIn = useSelector(getIsLoggedIn());
-    const isAdmin = useSelector(getAdminRole());
+    const isAdmin = isLoggedIn ? useSelector(getAdminRole()) : null;
     const currentUserId = useSelector(getCurrentUserId());
     const conditions = { isLoggedIn, isAdmin };
     const getPathname = currentUserId ? `/users/${currentUserId}${pathname}` : pathname;
