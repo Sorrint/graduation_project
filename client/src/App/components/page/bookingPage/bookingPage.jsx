@@ -119,6 +119,8 @@ const BookingPage = () => {
 
     const loadUpdatedRooms = () => {
         dispatch(loadRoomsList());
+        setActive(false);
+        setShowPopover(false);
     };
     if (roomsStatusLoading || roomTypesLoading || iconsStatusLoading) return <Loader />;
     if (data && rooms) {
