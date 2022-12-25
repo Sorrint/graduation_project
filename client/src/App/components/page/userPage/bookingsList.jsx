@@ -62,9 +62,15 @@ const BookingsList = () => {
                 selectedRoom={selectedRoom}
                 users={users}
                 rooms={rooms}
+            />
+            <BookingsTable
+                bookings={itemsCrop}
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                users={users}
+                rooms={rooms}
                 dispatch={dispatch}
             />
-            <BookingsTable bookings={itemsCrop} sortBy={sortBy} setSortBy={setSortBy} users={users} rooms={rooms} />
             {count > 0 && (
                 <div className="pagination__container">
                     <Pagination

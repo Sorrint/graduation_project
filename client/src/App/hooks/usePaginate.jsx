@@ -6,7 +6,7 @@ const usePaginate = (items, pageSize = 3, page = 1) => {
     const [currentPage, setCurrentPage] = useState(page);
 
     useEffect(() => {
-        if (items.length < pageSize) setCurrentPage(1);
+        if (items.length <= pageSize) setCurrentPage(1);
     }, [items, pageSize]);
 
     const itemsCrop = [...items].splice((currentPage - 1) * currentPageSize, currentPageSize);

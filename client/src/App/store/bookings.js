@@ -38,10 +38,10 @@ const bookingSlice = createSlice({
             state.entities.current.push(action.payload);
         },
         bookingRemoved: (state, action) => {
-            state.entities.current = state.entities.current.filter((c) => c._id !== action.payload);
             if (state.entities.allBookings) {
-                state.entities.allBookings.filter((c) => c._id !== action.payload);
+                state.entities.allBookings = state.entities.allBookings.filter((c) => c._id !== action.payload);
             }
+            state.entities.current = state.entities.current.filter((c) => c._id !== action.payload);
         },
         bookingsReset: (state) => {
             state.entities = null;
