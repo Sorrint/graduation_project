@@ -46,7 +46,6 @@ const BookingPage = () => {
     const roomsStatusLoading = useSelector(getRoomsLoadingStatus());
     const roomTypesLoading = useSelector(getRoomTypesLoadingStatus());
     const iconsStatusLoading = useSelector(getIconsLoadingStatus());
-
     const viewOnLakeId = useSelector(getIconId('landscape'));
     const currentUser = useSelector(getCurrentUserData());
     const typesFromDB = useSelector(getRoomTypes());
