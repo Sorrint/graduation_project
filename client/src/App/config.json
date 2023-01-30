@@ -1,4 +1,3 @@
 {
-    "apiEndPoint": "https://hotel-sorrint.amvera.io/api/v1/",
-    "apiEndPointLocal": "http://localhost:5000/api/v1/"
+    "apiEndPoint": "https://194.87.235.87/api/v1/"
 }
