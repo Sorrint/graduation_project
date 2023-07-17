@@ -6,10 +6,10 @@ const DropDownMenu = ({ setPopper, currentUser }) => {
     return (
         <div className="dropdown__menu" ref={setPopper}>
             <div className="dropdown__item">
-                <Link to={`/users/${currentUser._id}/profile`}>Профиль</Link>
+                <Link to={`/booking/users/${currentUser._id}/profile`}>Профиль</Link>
             </div>
             <div className="dropdown__item">
-                <Link to="/logout">Выйти</Link>
+                <Link to="/booking/logout">Выйти</Link>
             </div>
         </div>
     );

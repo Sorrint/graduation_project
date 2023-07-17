@@ -27,7 +27,7 @@ function App() {
             <UsersLoader>
                 <Switch>
                     {getRoutes(publicRoutes)}
-                    <Redirect to="/" />
+                    <Redirect to="/booking/" />
                 </Switch>
             </UsersLoader>
         </>

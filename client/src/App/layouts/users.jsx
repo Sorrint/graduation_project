@@ -11,13 +11,11 @@ import { getCurrentUserId } from '../store/users';
 const Users = () => {
     const { userId } = useParams();
     const currentUserId = useSelector(getCurrentUserId());
-    const userPath = `/users/${currentUserId}`;
-
+    const userPath = `/booking/users/${currentUserId}`;
     const changedRoutes = userRoutes.map((route) => {
         route.path = userPath + route.pathname;
         return route;
     });
-
     return (
         <AppLoader>
             <UserPage>

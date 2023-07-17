@@ -1,5 +1,5 @@
 {
-    "port": 8080,
+    "port": 5000,
     "portLocal": 5000,
     "mongoUri": "mongodb+srv://admin:MyGraduationProject@sandbox.5izytlw.mongodb.net/?retryWrites=true&w=majority",
     "accessSecret": "this is access key for my graduation project",

@@ -12,7 +12,7 @@ const SideBar = () => {
     const currentUser = useSelector(getCurrentUserData());
     const currentUserId = useSelector(getCurrentUserId());
     const isAdmin = currentUser?.roles.find((role) => role === 'admin');
-    const userPath = `/users/${currentUserId}`;
+    const userPath = `/booking/users/${currentUserId}`;
     return (
         <div className="sidebar">
             <ul className="sidebar__links">

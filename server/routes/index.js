@@ -42,11 +42,10 @@ export function Routes(app) {
         res.header('Access-Control-Allow-Headers', 'x-access-token, Origin, Content-Type, Accept');
         next();
     });
-    app.use('/api/v1', router);
+    app.use('/bookingApi/v1', router);
 
     if (process.env.NODE_ENV === 'production') {
-        app.use('/', express.static(path.join(__dirname, '..', 'client')));
-        console.log(__dirname);
+        app.use('/booking/', express.static(path.join(__dirname, '..', 'client')));
         const indexPath = path.join(__dirname, '..', 'client', 'index.html');
         app.get('*', (req, res) => {
             res.sendFile(indexPath);

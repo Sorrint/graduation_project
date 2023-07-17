@@ -12,7 +12,6 @@ const UserProfile = () => {
     const userId = useSelector(getCurrentUserId());
     const currentUser = useSelector(getUserById(userId));
     const usersLoading = useSelector(getUsersLoadingStatus());
-
     if (usersLoading) {
         return (
             <div className="content loader-content">
@@ -25,7 +24,7 @@ const UserProfile = () => {
             <div className="content user-content">
                 <div className="user__card">
                     <div className="user__info">
-                        <Link className="user__edit" to={`/users/${userId}/edit`}>
+                        <Link className="user__edit" to={`/booking/users/${userId}/edit`}>
                             <div className="edit-button_abs">{parse(icons.edit)}</div>
                         </Link>
 
