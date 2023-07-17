@@ -16,19 +16,22 @@ import Review from './components/page/userPage/review';
 import UserBookings from './components/page/userPage/userBookings';
 import RoomsList from './components/page/userPage/roomsList';
 import EditUserData from './components/ui/forms/editUserData';
+import BookingPage from './components/page/bookingPage';
+
+export const routesPrefix = process.env.REACT_APP_ROUTES_PREFIX;
 
 export const publicRoutes = [
-    { path: '/', name: 'Main Page', component: MainPage, exact: true },
-    { path: '/rooms/:roomId?', name: 'Rooms', component: Rooms },
-    { path: '/booking', name: 'Booking', component: Rooms, protected: true },
-    { path: '/logout', name: 'LogOut', component: LogOut },
-    { path: '/login', name: 'Login', component: LoginPage },
-    { path: '/about', name: 'About', component: AboutPage },
-    { path: '/services', name: 'Services', component: Services },
-    { path: '/news', name: 'News', component: NewsPage },
-    { path: '/contacts', name: 'Contacts', component: Contacts },
-    { path: '/reviews', name: 'Reviews', component: ReviewsPage, protected: true },
-    { path: '/users/:userId?/:route?', name: 'Users', component: Users, protected: true, exact: true }
+    { path: `${routesPrefix}/`, name: 'Main Page', component: MainPage, exact: true },
+    { path: `${routesPrefix}/rooms/:roomId?`, name: 'Rooms', component: Rooms },
+    { path: `${routesPrefix}/booking`, name: 'Booking', component: BookingPage, protected: true },
+    { path: `${routesPrefix}/logout`, name: 'LogOut', component: LogOut },
+    { path: `${routesPrefix}/login`, name: 'Login', component: LoginPage },
+    { path: `${routesPrefix}/about`, name: 'About', component: AboutPage },
+    { path: `${routesPrefix}/services`, name: 'Services', component: Services },
+    { path: `${routesPrefix}/news`, name: 'News', component: NewsPage },
+    { path: `${routesPrefix}/contacts`, name: 'Contacts', component: Contacts },
+    { path: `${routesPrefix}/reviews`, name: 'Reviews', component: ReviewsPage, protected: true },
+    { path: `${routesPrefix}/users/:userId?/:route?`, name: 'Users', component: Users, protected: true, exact: true }
 ];
 
 export const userRoutes = [

@@ -97,7 +97,7 @@ export const updateUserData = (payload) => async (dispatch) => {
     try {
         const data = await userService.update(payload);
         dispatch(userUpdated(data));
-        history.push(`/users/${data._id}/profile`);
+        history.push(`/bookings/users/${data._id}/profile`);
     } catch (error) {
         dispatch(updateUserFailed(error.message));
     }
@@ -127,7 +127,7 @@ export const logOut = () => async (dispatch) => {
     localStorageService.removeAuthData();
     dispatch(userLoggedOut());
     dispatch(clearBookingsList());
-    history.push('/');
+    history.push('/booking');
 };
 
 export const loadUsersList = () => async (dispatch) => {

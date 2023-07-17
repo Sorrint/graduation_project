@@ -12,7 +12,6 @@ const UserBookings = () => {
     const dispatch = useDispatch();
     const userBookings = useSelector(getUserBookings());
     const bookingsLoading = useSelector(getBookingsLoadingStatus());
-
     const handleBookingRemove = (room, record) => {
         const updatedBookings = room.booking.filter((b) => b._id !== record._id);
         const updatedRoom = { ...room, booking: updatedBookings };

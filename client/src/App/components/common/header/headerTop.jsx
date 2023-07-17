@@ -14,13 +14,13 @@ const HeaderTop = () => {
                     <div className="header__phone">8 800 700 000</div>
                     <div className="header__mail">mail@hotel.ru</div>
                 </div>
-                <Link to="/booking" className="header__button" role="button">
+                <Link to="/booking/booking" className="header__button" role="button">
                     ЗАБРОНИРОВАТЬ НОМЕР
                 </Link>
                 {isLoggedIn ? (
                     <NavProfile />
                 ) : (
-                    <Link to="/login">
+                    <Link to="/booking/login">
                         <button className="header__button" role="button">
                             ВОЙТИ/ЗАРЕГИСТРИРОВАТЬСЯ
                         </button>

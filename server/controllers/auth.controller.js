@@ -7,7 +7,7 @@ import TokenService from '../services/token.service.js';
 const AuthController = {
     signUp: async function (req, res) {
         try {
-            const errors = validationResult(req);
+            const errors = validationResult(req.body);
             if (!errors.isEmpty()) {
                 return res.status(400).json({ message: 'Ошибка при регистрации', errors });
             }
@@ -28,6 +28,7 @@ const AuthController = {
     },
     login: async function (req, res) {
         try {
+            console.log(req);
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 return res.status(400).json({ message: 'Ошибка при входе в систему', errors });

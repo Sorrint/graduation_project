@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import { getAdminRole, getCurrentUserId, getIsLoggedIn } from '../../store/users';
 import { Redirect, Route } from 'react-router-dom';
 
-const ProtectedRoute = ({ component: Component, children, condition = 'isLoggedIn', pathname = '/login', ...rest }) => {
+const ProtectedRoute = ({ component: Component, children, condition = 'isLoggedIn', pathname = '/booking/login', ...rest }) => {
     const isLoggedIn = useSelector(getIsLoggedIn());
     const isAdmin = useSelector(getAdminRole());
     const currentUserId = useSelector(getCurrentUserId());
     const conditions = { isLoggedIn, isAdmin };
-    const getPathname = currentUserId ? `/users/${currentUserId}${pathname}` : pathname;
+    const getPathname = currentUserId ? `/booking/users/${currentUserId}${pathname}` : pathname;
 
     return (
         <Route

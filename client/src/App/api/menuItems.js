@@ -1,37 +1,39 @@
+const routesPrefix = process.env.REACT_APP_ROUTES_PREFIX;
+
 export const navBarLinks = [
     {
         name: 'main',
-        path: '/',
+        path: `${routesPrefix}/`,
         text: 'Главная'
     },
     {
         name: 'numbers',
-        path: '/rooms',
+        path: `${routesPrefix}/rooms`,
         text: 'Номера'
     },
     {
         name: 'services',
-        path: '/services',
+        path: `${routesPrefix}/services`,
         text: 'Услуги'
     },
     {
         name: 'about',
-        path: '/about',
+        path: `${routesPrefix}/about`,
         text: 'О нас'
     },
     {
         name: 'news',
-        path: '/news',
+        path: `${routesPrefix}/news`,
         text: 'Новости и акции'
     },
     {
         name: 'contacts',
-        path: '/contacts',
+        path: `${routesPrefix}/contacts`,
         text: 'Контакты'
     },
     {
         name: 'reviews',
-        path: '/reviews',
+        path: `${routesPrefix}/reviews`,
         text: 'Отзывы'
     }
 ];
@@ -39,25 +41,25 @@ export const navBarLinks = [
 export const sidebarLinks = [
     {
         name: 'profile',
-        path: '/profile',
+        path: `${routesPrefix}/profile`,
         text: 'Мои данные'
     },
     {
         name: 'edit',
-        path: '/edit',
+        path: `${routesPrefix}/edit`,
         text: 'Редактировать профиль'
     },
     {
         name: 'myBookings',
-        path: '/bookings',
+        path: `${routesPrefix}/bookings`,
         text: 'Забронировать номер'
     },
     {
         name: 'currentBookings',
-        path: '/users/userId/currentBookings'
+        path: `${routesPrefix}/users/userId/currentBookings`
     },
     {
         name: 'review',
-        path: '/review'
+        path: `${routesPrefix}/review`
     }
 ];

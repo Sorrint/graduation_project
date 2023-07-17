@@ -78,7 +78,7 @@ const RoomPage = ({ id }) => {
         link: {
             subName: 'button',
             component: ({ key }) => (
-                <Link to={`/booking`} className="room-card__button info-button" key={key}>
+                <Link to={`/booking/booking`} className="room-card__button info-button" key={key}>
                     БРОНИРОВАТЬ
                 </Link>
             )

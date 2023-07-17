@@ -3,7 +3,7 @@ import axios from 'axios';
 import configFile from '../config.json';
 
 const httpAuth = axios.create({
-    baseURL: configFile.apiEndPoint + '/auth/'
+    baseURL: configFile.apiEndPoint + 'auth/'
 });
 const authService = {
     register: async (userData) => {
