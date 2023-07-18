@@ -74,7 +74,7 @@ const RoomsListPage = () => {
                 <div className="wrapper">
                     <Banner />
                     <div className="wrapper__header">
-                        <h1>На территории расположены три жилых коттеджа с теплыми и просторными номерами</h1>
+                        <p>На территории расположены три жилых коттеджа с теплыми и просторными номерами</p>
                         <div className="wrapper__filter">
                             <div className="wrapper__button" onClick={() => clearType()}>
                                 ВСЕ
@@ -91,7 +91,7 @@ const RoomsListPage = () => {
                                 ))}
                         </div>
                     </div>
-                    <div className="content">
+                    <div className="content room-cards">
                         {filteredRooms &&
                             filteredRooms.map((room) => (
                                 <RoomCard
