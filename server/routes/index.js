@@ -27,11 +27,11 @@ router.use('/reviews', ReviewRoute);
 router.use('/roomTypes', RoomTypeRoute);
 router.use(
     '/auth',
-    [
-        check('email', 'Email не может быть пустым').notEmpty(),
-        check('email', 'Некорректный email').isEmail(),
-        check('password', 'Минимальная длина пароля 8 символов').isLength({ min: 8 })
-    ],
+//    [
+//        check('email', 'Email не может быть пустым').notEmpty(),
+//       check('email', 'Некорректный email').isEmail(),
+//        check('password', 'Минимальная длина пароля 8 символов').isLength({ min: 8 })
+//    ],
     AuthRoute
 );
 router.use('/roles', RoleRoute);
