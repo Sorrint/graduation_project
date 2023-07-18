@@ -7,6 +7,7 @@
     border: 1px solid black;
 
     display: flex;
+    gap: 25px;
     flex-direction: column;
     align-items: center;
     font-weight: bold;
@@ -17,28 +18,27 @@
     padding-bottom: 20px;
     font-family: "Orchidea", serif;
     font-size: 18px;
+
     &__title {
-        padding: 20px 0;
 
         display: block;
 
         color: blue;
         font-size: 20px;
     }
+
     &__image {
         width: 100%;
         height: auto;
     }
 
     &__cost {
-        padding: 20px 0;
-
         color: blue;
         font-size: 24px;
     }
+
     &__guests {
         width: 100%;
-        padding: 10px 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -76,12 +76,9 @@
         }
     }
 
-    &__info {
-        padding: 10px 0;
-    }
     &__button {
-        margin-top: 10px;
-        width: 250px;
+        max-width: 250px;
+        width: 100%;
     }
 }
 
@@ -90,14 +87,10 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    margin: 30px 0;
-
-    font-size: 24px;
-    line-height: 50px;
-    font-weight: bold;
+    padding: 30px 20px;
 
     &__content-left {
-        width: 50vw;
+        min-width: 320px;
         flex-grow: 1;
     }
 
@@ -108,7 +101,6 @@
     }
 
     &__properties {
-        font-weight: bold;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -167,12 +159,6 @@
                 min-width: 0;
                 font-size: 16px;
             }
-        }
-        &__info {
-            padding: 10px;
-        }
-        &__title {
-            padding: 20px 10px;
         }
     }
 }

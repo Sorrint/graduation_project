@@ -745,6 +745,7 @@ button {
   width: 560px;
   border: 1px solid black;
   display: flex;
+  gap: 25px;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
@@ -756,7 +757,6 @@ button {
   font-size: 18px;
 }
 .room-card__title {
-  padding: 20px 0;
   display: block;
   color: blue;
   font-size: 20px;
@@ -766,13 +766,11 @@ button {
   height: auto;
 }
 .room-card__cost {
-  padding: 20px 0;
   color: blue;
   font-size: 24px;
 }
 .room-card__guests {
   width: 100%;
-  padding: 10px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -806,12 +804,9 @@ button {
   color: white;
   box-shadow: 2px 2px 5px #0ca60c;
 }
-.room-card__info {
-  padding: 10px 0;
-}
 .room-card__button {
-  margin-top: 10px;
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
 }
 
 .room-description {
@@ -819,13 +814,10 @@ button {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin: 30px 0;
-  font-size: 24px;
-  line-height: 50px;
-  font-weight: bold;
+  padding: 30px 20px;
 }
 .room-description__content-left {
-  width: 50vw;
+  min-width: 320px;
   flex-grow: 1;
 }
 .room-description__content-right {
@@ -834,7 +826,6 @@ button {
   text-align: center;
 }
 .room-description__properties {
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -883,12 +874,6 @@ button {
   .room-card__numberOfGuests_active {
     min-width: 0;
     font-size: 16px;
-  }
-  .room-card__info {
-    padding: 10px;
-  }
-  .room-card__title {
-    padding: 20px 10px;
   }
 }
 .footer {
@@ -1776,6 +1761,13 @@ button:focus {
 .room-info {
   position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
 }
 .room-info__image {
   width: 100%;
@@ -1783,8 +1775,8 @@ button:focus {
 }
 .room-info__guests {
   width: 100%;
-  padding: 10px 0;
   display: flex;
+  gap: 15px;
   flex-direction: row;
   justify-content: center;
 }
@@ -1800,7 +1792,6 @@ button:focus {
   justify-content: center;
   min-width: 100px;
   border: 2px solid #0ca60c;
-  font-size: 18px;
   margin-right: 0px;
   cursor: pointer;
   background-color: #04ca04;
@@ -1808,10 +1799,84 @@ button:focus {
   border-radius: 10%;
   box-shadow: 2px 2px 5px #0ca60c;
 }
+.room-info__numberOfGuests_active:hover {
+  border: 2px solid #0ca60c;
+  background-color: #04ca04;
+  color: white;
+  box-shadow: 2px 2px 5px #0ca60c;
+}
 .room-info__price {
   font-weight: bold;
 }
 
+.room-description__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.room-description__content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .room-description {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .room-description__content-left {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    gap: 40px;
+  }
+  .room-description__content-right {
+    order: 1;
+  }
+  .room-description__properties, .room-description__amenities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 60px;
+  }
+  .room-description__icon {
+    margin-right: 5px;
+  }
+  .room-description__text {
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .room-info__name {
+    font-size: 24px;
+  }
+  .room-info__description, .room-info__info, .room-info__cost, .room-info__label {
+    font-size: 18px;
+  }
+  .room-info__numberOfGuests {
+    font-size: 16px;
+  }
+  .room-info__numberOfGuests_active {
+    min-width: 0;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .room-description__content-left {
+    min-width: auto;
+  }
+  .room-description__properties, .room-description__amenities {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .room-info__guests {
+    flex-wrap: wrap;
+  }
+}
 .popup__booking {
   display: flex;
   flex-direction: column;

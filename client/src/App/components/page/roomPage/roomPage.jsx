@@ -45,15 +45,15 @@ const RoomPage = ({ id }) => {
     }, [room]);
 
     const roomCardOptions = {
-        image: {
-            subName: 'image',
-            path: 'image',
-            component: ({ key, ...rest }) => <RoomImage key={key} {...rest} />
-        },
         name: {
             subName: 'name',
             path: 'name',
             component: ({ key, ...rest }) => <RoomCardText key={key} {...rest} />
+        },
+        image: {
+            subName: 'image',
+            path: 'image',
+            component: ({ key, ...rest }) => <RoomImage key={key} {...rest} />
         },
         description: {
             subName: 'description',
@@ -95,24 +95,30 @@ const RoomPage = ({ id }) => {
 
                         <div className="content">
                             <div className="room-description">
-                                <div className="room-description__content-left">
-                                    Описание
-                                    <PropertiesList
-                                        icons={icons}
-                                        properties={selectedProprerties}
-                                        wrapperName="room-description"
-                                    />
-                                    <RoomAmenities icons={icons} amenities={room.amenities} text="Оснащение номера" />
-                                    <RoomAmenities icons={icons} amenities={room.otherAmenities} text="Прочее" />
-                                </div>
-                                <div className="room-description__content-right">
-                                    <RoomCard
-                                        options={roomCardOptions}
-                                        data={room}
-                                        wrapperName="room-info"
-                                        key={room._id}
-                                    />
-                                </div>
+                                    <div className="room-description__content-left">
+                                        <div className="room-description__section">
+                                            <h2 className='room-description__title'>Описание</h2>
+                                            <PropertiesList
+                                                icons={icons}
+                                                properties={selectedProprerties}
+                                                wrapperName="room-description"
+                                            />
+                                        </div>
+                                        <div className="room-description__section">
+                                            <RoomAmenities icons={icons} amenities={room.amenities} text="Оснащение номера" />
+                                        </div>
+                                        <div className="room-description__section">
+                                            <RoomAmenities icons={icons} amenities={room.otherAmenities} text="Прочее" />
+                                        </div>
+                                    </div>
+                                    <div className="room-description__content-right">
+                                        <RoomCard
+                                            options={roomCardOptions}
+                                            data={room}
+                                            wrapperName="room-info"
+                                            key={room._id}
+                                        />
+                                    </div>
                             </div>
                         </div>
                     </div>
