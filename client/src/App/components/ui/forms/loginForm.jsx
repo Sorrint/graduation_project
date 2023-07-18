@@ -61,7 +61,7 @@ const LoginForm = ({ setType }) => {
                 <button className="form-container__button" disabled={!isValid}>
                     ВОЙТИ
                 </button>
-                <div className="form-container__button" onClick={() => setType('signup-form')}>
+                <div className="form-container__button form-container__button_form-type" onClick={() => setType('signup-form')}>
                     РЕГИСТРАЦИЯ
                 </div>
             </form>
