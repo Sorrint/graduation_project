@@ -124,7 +124,6 @@ input:focus {
 .wrapper {
   width: 100%;
   flex: 1 1 auto;
-  padding: 0px 10px 20px 10px;
 }
 .wrapper__header {
   margin: 0 auto;
@@ -873,7 +872,7 @@ button {
     margin: 0;
   }
   .room-cards {
-    padding: 0;
+    padding: 0 10px 40px 10px;
   }
 }
 @media screen and (max-width: 720px) {
