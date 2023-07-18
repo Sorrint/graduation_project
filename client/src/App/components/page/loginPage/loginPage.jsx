@@ -20,8 +20,8 @@ const LoginPage = () => {
             <Header />
             <div className="wrapper">
                 <div className={formName(formType)}>
-                    <LoginForm />
-                    <RegisterForm />
+                    <LoginForm setType={handleClick}/>
+                    <RegisterForm setType={handleClick}/>
                     <OverlayLogin setType={handleClick} />
                 </div>
             </div>
