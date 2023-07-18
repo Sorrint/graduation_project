@@ -33,6 +33,7 @@ const BookingPanel = ({ onChange, data, roomTypes, control, onSubmit }) => {
                     options={roomTypes}
                     defaultOption={'Выберите класс номера'}
                     onChange={onChange}
+                    wrapperName="booking-panel"
                     label="Категория номера"
                 />
                 <CheckBoxField name="viewOnLake" onChange={onChange} value={viewOnLake}>

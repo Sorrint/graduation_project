@@ -16,7 +16,7 @@ const Counter = ({ wrapperName, name, value, onChange, min = 0, max, step = 1, l
 
     return (
         <div className="input-container">
-            <label htmlFor={name} className="form-label">
+            <label htmlFor={name} className={'form-label' + (wrapperName ? ` form-label_${wrapperName}` : '')}>
                 {label}
             </label>
             <div className="counter">

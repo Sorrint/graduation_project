@@ -1,25 +1,18 @@
 .input-container {
-    display: grid;
-    grid-template-columns: 2fr 6fr;
-    grid-auto-flow: row dense;
-    grid-template-areas:
-        "label input"
-        "error error";
+    display: flex;
     align-items: center;
-    width: 100%;
     margin: 8px 0;
 
     &__label {
-        padding-right: 10px;
-        text-align: right;
-        grid-area: label;
+        min-width: 70px;
+        text-align: left;
         font-size: 16px;
         word-wrap: normal;
     }
     &__input {
         background-color: #fff;
         font-family: "Orchidea", sans-serif;
-
+        flex-grow: 1;
         border-radius: 5px;
         border: 1px solid rgb(165, 165, 165);
         padding: 12px 0px 12px 15px;
@@ -104,16 +97,18 @@
     }
 }
 .input-group {
-    display: grid;
-    grid-template-columns: 3fr auto;
-    grid-area: input;
+    display: flex;
+    width: 100%;
     align-items: center;
+    margin-left: 10px;
 }
 
 .form-control {
     width: 100%;
 }
-
+.form-label {
+    margin-right: 10px;
+}
 .invalid-feedback {
     padding: 5px 0;
     font-size: 14px;
@@ -123,4 +118,15 @@
     grid-column-start: 2;
     grid-column-end: 3;
     width: 100%;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 320px) {
+    .input-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        text-align: center;
+    }
 }
