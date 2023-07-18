@@ -5,7 +5,7 @@ import { getBannerByLocation } from '../../../store/banner';
 
 const BannerByRoute = () => {
     const location = useLocation();
-    const containSlash = location.pathname === '/' ? false : /\/$/gi.test(location.pathname);
+    const containSlash = location.pathname === '/booking' ? false : /\/$/gi.test(location.pathname);
     const pathname = containSlash ? location.pathname.slice(0, -1) : location.pathname;
 
     const banner = useSelector(getBannerByLocation(pathname));

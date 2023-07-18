@@ -19,11 +19,10 @@
     }
 
     &__content {
-        width: 1200px;
-        margin: 0 auto;
+        width: 100%;
         display: flex;
         text-align: center;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -58,11 +57,12 @@
         background-image: url("../public/img/logo.png");
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center center;
     }
 
     &__link {
         font-size: 14px;
-        margin: 20px 16px;
+        padding: 20px 16px;
         text-decoration: none;
         font-weight: 600;
         color: black;
@@ -73,9 +73,8 @@
         background: none;
         border-radius: 20px;
         border: 1px solid #ffffff;
-        color: #ffffff;
+        font-weight: bold;  
         font-size: 12px;
-        font-weight: bold;
         padding: 5px 15px;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -87,5 +86,106 @@
         border: 1px solid #ffffff;
         border-radius: 5px;
         padding: 5px;
+    }
+
+    &__dropdown {
+        display: none;
+        margin-right: 10px;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        
+        & span {
+            top: 9px;
+            
+        }
+
+        &::before,
+        &::after,
+        & span {
+            position: absolute;
+            left: 0;
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+    }
+}
+
+.sidebar{
+    &__line::before {
+    position: absolute;
+    left: 5px;
+    top: 10px;  
+    content: '';
+    height: 2px;
+    width: 80%;
+}
+
+    &__menu {
+        display: block;
+        position: absolute;
+        background-color: #f4f3f3;
+        color:$mainColor;
+        font-size: 16px;
+        font-weight: 600;
+        right: 0;
+        top: 56px;
+        padding: 10px;
+        max-width: 320px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link {
+        padding: 15px 0;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .header {
+        &__link {
+            padding: 20px 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .header {
+        &__content {
+            justify-content: right;
+            gap: 10px;
+        }
+        &__contacts {
+            display: none;
+        }
+        &__button {
+            margin-right: auto ;
+            max-width: 200px;
+
+            &_hidden {
+                display: none;
+            }
+        }
+        &__dropdown {
+            display: block;
+        }
+        &__navigation {
+            display: none;
+        }
     }
 }
