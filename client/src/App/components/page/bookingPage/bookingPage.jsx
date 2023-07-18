@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { getToday, getTomorrow } from '../../../utils/utils';
 import BookingPanel from '../../ui/booking/bookingPanel';
 import { useDispatch, useSelector } from 'react-redux';
@@ -50,7 +49,6 @@ const BookingPage = () => {
     const currentUser = useSelector(getCurrentUserData());
     const typesFromDB = useSelector(getRoomTypes());
     const roomTypes = typesFromDB ? [allTypes, ...typesFromDB] : [allTypes];
-    const [data, setData] = useState();
     const [active, setActive] = useState(false);
     const [, setReferenceElement] = useState(null);
     const [showPopover, setShowPopover] = useState(false);
@@ -61,9 +59,8 @@ const BookingPage = () => {
         }
     });
 
-    useEffect(() => {
-        setData(getValues());
-    }, []);
+    const [data, setData] = useState(getValues());
+
     const handleChange = (target) => {
         setValue(target.name, target.value);
         setData(getValues());
@@ -121,7 +118,9 @@ const BookingPage = () => {
         setActive(false);
         setShowPopover(false);
     };
+
     if (roomsStatusLoading || roomTypesLoading || iconsStatusLoading) return <Loader />;
+
     if (data && rooms) {
         const filteredRooms = filterRooms(rooms, data);
 
@@ -162,10 +161,5 @@ const BookingPage = () => {
             </>
         );
     }
-};
-
-BookingPage.propTypes = {
-    rooms: PropTypes.array,
-    icons: PropTypes.array
 };
 export default BookingPage;

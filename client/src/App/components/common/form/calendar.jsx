@@ -18,8 +18,8 @@ const Calendar = ({ bookingRange, onChange, control, minDate, wrapperName, label
             control={control}
             name="bookingRange"
             render={({ field }) => (
-                <div className="input-container">
-                    <label className="form-label" htmlFor="datepicker">
+                <div className={'input-container' + (wrapperName ? ` input-container_${wrapperName}` : '')}>
+                    <label className={'form-label' + (wrapperName ? ` form-label_${wrapperName}` : '')} htmlFor="datepicker">
                         {label}
                     </label>
                     <div className="datepicker">

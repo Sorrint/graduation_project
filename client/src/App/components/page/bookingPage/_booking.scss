@@ -3,17 +3,17 @@
     grid-template-columns: 1fr 1fr 1fr;
 
     &__message {
-        // display: flex;
         width: 100%;
-        // align-items: center;
-        // justify-content: center;
-        // justify-items: center;
         grid-column-start: 3;
         padding: 20px;
         font-size: 20px;
         color: $deleteButtonColor;
         font-weight: bold;
     }
+}
+
+.input-calendar {
+    font-size: 16px;
 }
 
 .booking-card {
@@ -66,22 +66,11 @@
     }
 }
 .booking-panel {
-    height: 70px;
-    width: 100%;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: repeat(6, 1fr);
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    &__calendar {
-        display: flex;
-    }
-    &__calendar {
-        padding: 0 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    gap: 10px;
 }
 
 .datepicker {
@@ -105,6 +94,7 @@
 .input-calendar {
     text-align: center;
 }
+
 
 .counter {
     display: grid;
@@ -162,7 +152,49 @@
     }
 }
 
-.form-label {
-    font-size: 16px;
-    padding: 10px;
+
+
+
+@media screen and (max-width: 960px) {
+    .booking-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .booking-panel {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .booking-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .form-label_booking-panel {
+        font-size: 16px;
+        padding: 10px;
+        max-width: 130px;
+        width: 100%;
+        flex-grow: 1;
+    }
+    .input-container_booking-panel {
+        width: 100%;
+    }
+    .react-datepicker {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .form-label_booking-panel {
+        font-weight: bold;
+    }
+    .react-datepicker {
+        left: -25px;
+    }
 }

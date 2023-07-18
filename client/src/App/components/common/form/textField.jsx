@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 import { icons } from '../../../api/icons';
 
-const TextField = ({ label, type, name, error, placeholder, register, formName, autoComplete, field, value }) => {
+const TextField = ({ label, type, name, error, placeholder, register, formName, autoComplete, field }) => {
     const [showPassword, setShowPassword] = useState(false);
     const icon = showPassword === false ? parse(`${icons.closedEye}`) : parse(`${icons.openEye}`);
     const getInputClasses = () => {
@@ -14,7 +14,7 @@ const TextField = ({ label, type, name, error, placeholder, register, formName, 
         setShowPassword((prevState) => !prevState);
     };
 
-    return (
+    return (<>
         <div className="input-container">
             <label className="input-container__label" htmlFor={name}>
                 {label}
@@ -37,9 +37,9 @@ const TextField = ({ label, type, name, error, placeholder, register, formName, 
                     </button>
                 )}
             </div>
-            {error && <div className="invalid-feedback">{error}</div>}
         </div>
-    );
+        {error && <div className="invalid-feedback">{error}</div>}
+    </>);
 };
 
 export default TextField;
@@ -56,6 +56,5 @@ TextField.propTypes = {
     register: PropTypes.object,
     formName: PropTypes.string,
     autoComplete: PropTypes.string,
-    field: PropTypes.object,
-    value: PropTypes.number
+    field: PropTypes.object
 };

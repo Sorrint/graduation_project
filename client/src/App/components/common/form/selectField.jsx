@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SelectField = ({ label, value, onChange, defaultOption, options, name, error, register, elementName }) => {
+const SelectField = ({ label, value, onChange, defaultOption, options, name, error, register, elementName, wrapperName }) => {
     const handleChange = ({ target }) => {
         onChange && onChange({ name: target.name, value: target.value });
     };
@@ -13,7 +13,7 @@ const SelectField = ({ label, value, onChange, defaultOption, options, name, err
     const optionsArray = !Array.isArray(options) && typeof options === 'object' ? Object.values(options) : options;
     return (
         <div className="input-container">
-            <label htmlFor={name} className="form-label">
+            <label htmlFor={name} className={'form-label' + (wrapperName ? ` form-label_${wrapperName}` : '')}>
                 {label}
             </label>
             <select
@@ -48,6 +48,7 @@ SelectField.propTypes = {
     name: PropTypes.string,
     error: PropTypes.string,
     register: PropTypes.object,
+    wrapperName: PropTypes.string,
     elementName: PropTypes.string
 };
 export default SelectField;
