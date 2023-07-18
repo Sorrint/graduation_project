@@ -23,15 +23,19 @@ const RoomAmenities = ({ icons, amenities, text }) => {
         );
     }
     return (
-        <div className="room-description__amenities">
-            {text}
-            {amenities.map((amenity) => (
-                <div className="room-description__amenity" key={amenity}>
-                    <i className="room-description__icon">{getIcon(amenity)}</i>
-                    <span className="room-description__text">{getIconText(icons, amenity)}</span>
-                </div>
-            ))}
-        </div>
+        <>
+            <h2 className='room-description__title'>
+                {text}
+            </h2>
+            <div className="room-description__amenities">
+                {amenities.map((amenity) => (
+                    <div className="room-description__amenity" key={amenity}>
+                        <i className="room-description__icon">{getIcon(amenity)}</i>
+                        <span className="room-description__text">{getIconText(icons, amenity)}</span>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 
