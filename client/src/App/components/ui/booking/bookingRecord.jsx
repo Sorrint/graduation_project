@@ -41,17 +41,19 @@ const BookingRecord = ({ record, onRemove }) => {
         record && (
             <div className="booking-info">
                 <div className="booking-info__room">
-                    <img className="booking-info__image" src={room.image} alt="" />
-                    <div className="booking-info__title">{room.title}</div>
-                    <div className="booking-info__description">{room.description}</div>
-                    <div className="booking-info__link">
-                        <div className="booking-info__button info-button">
-                            <Link to={`/rooms/${room._id}`}>Описание номера</Link>
-                        </div>
-                        <div className="booking-info__delete ">
-                            <button className=" delete-button" onClick={handleDelete}>
-                                Удалить бронь
-                            </button>
+                    <img className="booking-info__image" src={`../${room.image}`} alt="" />
+                    <div className="booking-info__about-room">
+                        <div className="booking-info__title">{room.title}</div>
+                        <div className="booking-info__description">{room.description}</div>
+                        <div className="booking-info__buttons">
+                            <div className="booking-info__button info-button">
+                                <Link to={`/booking/rooms/${room._id}`}>Описание номера</Link>
+                            </div>
+                            <div className="booking-info__delete ">
+                                <button className=" delete-button" onClick={handleDelete}>
+                                    Удалить бронь
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

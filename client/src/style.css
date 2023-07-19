@@ -458,7 +458,7 @@ input:focus {
   bottom: 0;
 }
 
-.sidebar__line::before {
+.burger__line::before {
   position: absolute;
   left: 5px;
   top: 10px;
@@ -466,7 +466,7 @@ input:focus {
   height: 2px;
   width: 80%;
 }
-.sidebar__menu {
+.burger__menu {
   display: block;
   position: absolute;
   background-color: #f4f3f3;
@@ -480,11 +480,11 @@ input:focus {
   width: 100%;
   height: 100%;
 }
-.sidebar__links {
+.burger__links {
   display: flex;
   flex-direction: column;
 }
-.sidebar__link {
+.burger__link {
   padding: 15px 0;
 }
 
@@ -1027,6 +1027,7 @@ button {
 .form-select {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   width: 150px;
@@ -1508,11 +1509,7 @@ button:focus {
 }
 
 .user-wrapper {
-  display: grid;
-  padding: 0 40px;
-  grid-template-areas: "sidebar" "content";
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr;
+  display: flex;
   justify-content: center;
   height: 100%;
 }
@@ -1525,12 +1522,15 @@ button:focus {
 
 .userpage-title {
   font-size: 24px;
-  padding: 20px;
   font-weight: bold;
 }
 
 .user-content {
-  grid-area: "content";
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
 
 .user__card {
@@ -1561,7 +1561,23 @@ button:focus {
   margin: 25px 0;
 }
 
-.review__button {
+.reviews {
+  flex-grow: 1;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reviews__title {
+  font-size: 32px;
+  font-weight: bold;
+}
+.reviews__form {
+  width: 40vw;
+  font-size: 20px;
+}
+.reviews__button {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -1569,8 +1585,50 @@ button:focus {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 960px) {
+  .reviews {
+    padding: 0 20px;
+  }
+  .reviews__form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .reviews {
+    width: 80%;
+    padding: 20px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .reviews__button {
+    justify-content: center;
+  }
+  .user-wrapper {
+    display: block;
+  }
+  .user-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .user__info {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .reviews {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .reviews__title {
+    font-size: 24px;
+  }
+}
 .sidebar {
-  grid-area: sidebar;
+  max-width: 210px;
+  width: 100%;
   border-left: 2px solid #3ac4fa;
   border-right: 2px solid #3ac4fa;
   display: flex;
@@ -1610,6 +1668,9 @@ button:focus {
   fill: #ffffff;
   stroke: #ffffff;
 }
+.sidebar__burger {
+  border: none;
+}
 
 @keyframes hover-fill {
   from {
@@ -1624,51 +1685,71 @@ button:focus {
     stroke: #ffffff;
   }
 }
+@media screen and (max-width: 720px) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar__burger {
+    display: block;
+  }
+}
+.burger__item {
+  text-transform: uppercase;
+  border: none;
+  stroke: #3ac4fa;
+}
+.burger__item.active {
+  stroke: #fff;
+}
+
+.user-bookings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
 .booking-info {
-  margin: 0 20px;
-  padding: 20px 0 20px 40px;
   border-bottom: 1px solid #1e11a9;
   font-size: 20px;
 }
-.booking-info__link {
-  grid-area: "buttons";
+.booking-info__buttons {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   font-weight: bold;
+  justify-content: center;
+  gap: 16px;
 }
 .booking-info__room {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: repeat(1fr);
-  grid-template: "image" "title" "image" "description" "image" "buttons";
+  display: flex;
   align-items: center;
+  margin-bottom: 16px;
 }
 .booking-info__title {
-  padding-left: 15px;
-  grid-area: "title";
-  margin: 15px 0;
   font-weight: bold;
 }
 .booking-info__description {
-  padding-left: 15px;
+  padding-left: 16px;
   grid-area: "description";
 }
 .booking-info__image {
-  grid-area: "image";
-  grid-row-start: 1;
-  grid-row-end: 4;
   width: 300px;
   height: auto;
 }
 .booking-info__record {
-  margin: 15px 0;
+  margin: 16px 0;
   display: grid;
   grid-template-columns: 2fr 3fr;
   align-items: center;
+  gap: 0 16px;
 }
-.booking-info__delete {
-  margin-left: 25px;
+.booking-info__about-room {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
 }
 
 .booking-info:last-child {
@@ -1685,22 +1766,77 @@ button:focus {
     color: #ffffff;
   }
 }
+@media screen and (max-width: 960px) {
+  .booking-info__room {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .booking-info__image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .user-bookings {
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .booking-info__value {
+    padding-left: 10px;
+  }
+  .booking-info__label {
+    min-width: 125px;
+  }
+  .booking-info__title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .booking-info__record {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+}
+::-webkit-scrollbar {
+  width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #e7e7e7;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3ac4fa;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
+}
+
 .admin-panel {
   display: flex;
   padding: 50px;
+  overflow: auto;
+  position: relative;
   flex-direction: column;
   justify-content: center;
+  gap: 24px;
+  flex-grow: 1;
+  cursor: default;
 }
 .admin-panel__title {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 50px;
 }
 
 .roomData-table,
 .bookings-table {
-  border-collapse: collapse;
-  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 .roomData-table__header,
 .bookings-table__header {
@@ -1722,7 +1858,7 @@ button:focus {
 }
 .roomData-table__row,
 .bookings-table__row {
-  height: 120px;
+  height: 70px;
   border-bottom: 1px solid #000;
 }
 
@@ -1738,14 +1874,37 @@ button:focus {
 .sort-direction {
   stroke: #000;
   stroke-width: 1;
-  position: absolute;
 }
 
 .bookings-settings {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 18px;
 }
 
+@media screen and (max-width: 720px) {
+  .admin-panel {
+    padding: 20px;
+  }
+  .admin-panel__title {
+    font-size: 28px;
+  }
+  .bookings-table__title,
+  .roomData-table__title {
+    font-size: 20px;
+  }
+  .bookings-table__value,
+  .roomData-table__value {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .bookings-settings {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .popup__container {
   display: flex;
   justify-content: center;
@@ -2061,12 +2220,14 @@ button:focus {
   background-color: #04ca04;
   border-radius: 10px;
   color: #ffffff;
+  text-align: center;
 }
 .room-status__busy {
   padding: 10px;
   background-color: #f54545;
   border-radius: 10px;
   color: #ffffff;
+  text-align: center;
 }
 
 .admin-panel__content {
@@ -2254,7 +2415,6 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15px 0;
   font-size: 20px;
 }
 .pagination__text {

@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextAreaField = ({ label, name, error, placeholder, value, rows = 2, register }) => {
+const TextAreaField = ({ label, name, error, placeholder, rows = 2, register, displayLabel = true }) => {
     const getInputClasses = () => {
         return 'input-container__input' + (error ? ' is-invalid' : '');
     };
     return (
-        <div className="input-container">
-            <label htmlFor={name} className="form-label">
-                {label}
-            </label>
-            <textarea
-                className={getInputClasses()}
-                id={name}
-                name={name}
-                placeholder={placeholder}
-                rows={rows}
-                {...register}
-            />
+        <>
+            <div className="input-container">
+                {displayLabel && <label htmlFor={name} className="form-label">
+                    {label}
+                </label>}
+                <textarea
+                    className={getInputClasses()}
+                    id={name}
+                    name={name}
+                    placeholder={placeholder}
+                    rows={rows}
+                    {...register}
+                />
+            </div>
             {error && <div className="invalid-feedback">{error}</div>}
-        </div>
+        </>
     );
 };
 
@@ -32,5 +34,6 @@ TextAreaField.propTypes = {
     placeholder: PropTypes.string,
     register: PropTypes.object,
     rows: PropTypes.number,
-    value: PropTypes.string
+    value: PropTypes.string,
+    displayLabel: PropTypes.bool
 };

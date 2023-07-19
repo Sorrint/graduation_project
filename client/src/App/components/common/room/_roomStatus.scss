@@ -4,6 +4,7 @@
         background-color: $confirmButtonColor;
         border-radius: 10px;
         color: #ffffff;
+        text-align: center;
     }
 
     &__busy {
@@ -11,5 +12,6 @@
         background-color: $deleteButtonColor;
         border-radius: 10px;
         color: #ffffff;
+        text-align: center;
     }
 }

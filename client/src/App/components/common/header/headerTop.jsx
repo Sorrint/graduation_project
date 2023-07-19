@@ -13,6 +13,9 @@ const HeaderTop = () => {
     const toggleMenu = () => {
         setOpen((prevState) => !prevState);
     };
+    const closePopup = () => {
+        setOpen(false);
+    };
 
     return (
         <div className="header__top-bar">
@@ -36,7 +39,7 @@ const HeaderTop = () => {
                 </button>
                 {isOpen && (
                     <OverlayingPopupDropDown isOpened={isOpen} onClose={toggleMenu}>
-                        <DropDownNavMenu setPopper={setPopperElement}/>
+                        <DropDownNavMenu setPopper={setPopperElement} closePopup={closePopup}/>
                     </OverlayingPopupDropDown>
 
                 )}

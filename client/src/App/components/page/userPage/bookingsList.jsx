@@ -44,7 +44,7 @@ const BookingsList = () => {
 
     const filteredBookings = filterBookings(bookings || []);
     const count = filteredBookings.length;
-    const { itemsCrop, currentPage, currentPageSize, setCurrentPage } = usePaginate(filteredBookings || []);
+    const { itemsCrop, currentPage, currentPageSize, setCurrentPage } = usePaginate(filteredBookings || [], 5);
 
     if (bookingsLoading || usersLoading || roomsLoading) {
         return (

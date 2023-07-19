@@ -1,19 +1,40 @@
+::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #e7e7e7;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $mainColor;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
 .admin-panel {
     display: flex;
     padding: 50px;
+    overflow: auto;
+	position: relative;
     flex-direction: column;
     justify-content: center;
+    gap: 24px;
+    flex-grow: 1;
+    cursor: default;
 
     &__title {
         font-size: 32px;
         font-weight: bold;
-        margin-bottom: 50px;
     }
 }
 .roomData-table,
 .bookings-table {
-    border-collapse: collapse;
-    text-align: center;
+    display: inline-block;
+	vertical-align: top;
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
 
     &__header {
         height: 50px;
@@ -33,7 +54,7 @@
     }
 
     &__row {
-        height: 120px;
+        height: 70px;
         border-bottom: 1px solid #000;
     }
 }
@@ -52,10 +73,36 @@
 .sort-direction {
     stroke: #000;
     stroke-width: 1;
-    position: absolute;
 }
 
 .bookings-settings {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;  
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 720px) {
+    .admin-panel {
+        padding: 20px;
+        &__title {
+            font-size: 28px;
+        }
+    }
+    .bookings-table,
+    .roomData-table {
+        &__title {
+            font-size: 20px;
+        }
+        &__value {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .bookings-settings {
+        align-items: center;
+        justify-content: center;
+    }
 }

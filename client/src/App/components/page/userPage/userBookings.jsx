@@ -31,7 +31,7 @@ const UserBookings = () => {
     }
     if (itemsCrop) {
         return (
-            <div className="userBookings">
+            <div className="user-bookings">
                 <h1 className="userpage-title">Мои бронирования</h1>
                 {itemsCrop.map((record) => (
                     <BookingRecord record={record} onRemove={handleBookingRemove} key={record._id} />
