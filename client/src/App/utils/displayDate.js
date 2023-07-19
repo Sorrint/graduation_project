@@ -3,19 +3,15 @@ export function displayDate(timeStamp) {
         year: 'numeric',
         month: 'long'
     };
-    const numericTimeStamp = Date.parse(timeStamp);
     const dateTimeStamp = new Date(timeStamp);
     const now = new Date();
-    const numericNow = Date.parse(now);
-    addZero(dateTimeStamp.getMinutes());
+
     if (now.getFullYear() !== dateTimeStamp.getFullYear()) {
-        return ` - ${dateTimeStamp.getDate()} ${dateTimeStamp.toLocaleString('ru', {
-            options
-        })} ${dateTimeStamp.getFullYear()}`;
+        return ` - ${dateTimeStamp.getDate()} ${dateTimeStamp.toLocaleString('ru', options)}`;
     } else if (now.getDate() !== dateTimeStamp.getDate()) {
         return ` - ${dateTimeStamp.getDate()} ${dateTimeStamp.toLocaleString('ru', options)}`;
     } else {
-        const diff = (numericNow - numericTimeStamp) / 60000;
+        const diff = (now - dateTimeStamp) / 60000;
         if (diff >= 0 && diff < 1) {
             return ' - 1 минуту назад';
         }
@@ -28,7 +24,7 @@ export function displayDate(timeStamp) {
         if (diff >= 30 && diff < 60) {
             return ' - 30 минут назад';
         }
-        return ` - ${dateTimeStamp.getHours()}:${addZero(dateTimeStamp.getMinutes())}`;
+        return `- ${dateTimeStamp.getHours()}:${addZero(dateTimeStamp.getMinutes())}`;
     }
 }
 

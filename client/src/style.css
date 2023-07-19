@@ -172,12 +172,6 @@ input:focus {
   justify-content: space-between;
   padding-bottom: 20px;
 }
-.content p {
-  padding: 40px;
-  font-size: 20px;
-  line-height: 27px;
-  text-align: justify;
-}
 
 .booking__button {
   margin: 10px 0;
@@ -1707,6 +1701,7 @@ button:focus {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  flex-grow: 1;
 }
 
 .booking-info {
@@ -1723,6 +1718,7 @@ button:focus {
   gap: 16px;
 }
 .booking-info__room {
+  max-width: 1024px;
   display: flex;
   align-items: center;
   margin-bottom: 16px;
@@ -1739,9 +1735,10 @@ button:focus {
   height: auto;
 }
 .booking-info__record {
+  max-width: 1024px;
   margin: 16px 0;
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 3fr 4fr;
   align-items: center;
   gap: 0 16px;
 }
@@ -1749,6 +1746,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex-grow: 1;
   text-align: center;
 }
 
@@ -2346,20 +2344,32 @@ button:focus {
 .reviews-content {
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  max-width: 960px;
+  gap: 30px;
+  padding: 20px;
 }
 
 .review-message {
-  margin: 30px 0;
   align-self: flex-start;
   height: 200px;
   width: 500px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #000000;
   border-radius: 10px;
   background-color: #8ac4fa;
 }
 
-.review-message__flipped {
+.review-message p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.review-message span {
+  font-size: 16px;
+}
+
+.review-message_flipped {
   height: 200px;
   width: 500px;
   align-self: flex-end;
@@ -2372,40 +2382,77 @@ button:focus {
   grid-area: content;
 }
 
-.message p {
+.review__username {
   padding: 0;
   margin: 0;
+  font-weight: bold;
 }
 
 .review__container {
   width: 40vw;
 }
 
-.message {
+.review {
   height: 150px;
   padding: 10px;
 }
-.message__user {
+.review__user {
+  padding: 10px;
+  height: 80px;
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  position: relative;
 }
-.message__info {
-  padding: 10px;
+.review__info {
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 100%;
+  gap: 10px;
+  justify-content: center;
 }
-.message__content {
+.review__content {
   padding: 10px;
 }
-.message__avatar {
-  margin-right: 20px;
+.review__avatar {
+  height: 60px;
+  width: 60px;
+  flex-grow: 0;
   border: 1px solid #1e11a9;
   border-radius: 50%;
   background-color: #fff;
 }
+.review__remove {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 
+@media screen and (max-width: 960px) {
+  .reviews-content {
+    padding: 20px 16px;
+  }
+  .review-message {
+    padding: 0 20px;
+    height: auto;
+  }
+  .review-message p {
+    font-size: 16px;
+  }
+  .review-message span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .review-message {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .review-message {
+    width: 90%;
+    padding: 0 15px;
+  }
+}
 .pagination {
   display: flex;
   flex-direction: row;
