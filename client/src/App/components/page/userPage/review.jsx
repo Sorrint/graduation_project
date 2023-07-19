@@ -4,7 +4,9 @@ const Review = () => {
     return (
         <div className="reviews">
             <h1 className="reviews__title">Оставьте свой отзыв</h1>
+            <h1 className="reviews__title">Оставьте свой отзыв</h1>
             <ReviewForm />
+
         </div>
     );
 };
