@@ -5,31 +5,33 @@ import parse from 'html-react-parser';
 import { icons } from '../../api/icons';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom/cjs/react-router-dom';
+import PropTypes from 'prop-types';
 
-const SideBar = () => {
+const SideBar = ({ wrapperName, hideBackLink = false, closePopup }) => {
     const { route } = useParams();
-    const getClassname = (text) => (text === route ? 'sidebar__item active' : 'sidebar__item');
+    const getClassname = (text) => ('sidebar__item ' + (wrapperName ? ` ${wrapperName}__item` : '') + (text === route ? ' active' : ''));
     const currentUser = useSelector(getCurrentUserData());
     const currentUserId = useSelector(getCurrentUserId());
     const isAdmin = currentUser?.roles.find((role) => role === 'admin');
     const userPath = `/booking/users/${currentUserId}`;
+
     return (
-        <div className="sidebar">
-            <ul className="sidebar__links">
-                <li className={getClassname('profile')}>
-                    <Link to={`${userPath}/profile`} className="sidebar__link">
+        <div className={'sidebar' + (wrapperName ? ` sidebar__${wrapperName}` : '')}>
+            <ul className='sidebar__links'>
+                <li className={getClassname('profile')} onClick={closePopup}>
+                    <Link to={`${userPath}/profile`} className={'sidebar__link'}>
                         <span className="sidebar__icon"> {parse(`${icons.profile}`)}</span>
                         <div className="sidebar__text">Мои данные</div>
                     </Link>
                 </li>
-                <li className={getClassname('myBookings')}>
-                    <Link to={`${userPath}/myBookings`} className="sidebar__link">
+                <li className={getClassname('myBookings')} onClick={closePopup}>
+                    <Link to={`${userPath}/myBookings`} className={'sidebar__link'}>
                         <span className="sidebar__icon"> {parse(`${icons.bookings}`)}</span>
                         <div className="sidebar__text">Мои бронирования</div>
                     </Link>
                 </li>
                 <li className={getClassname('review')}>
-                    <Link to={`${userPath}/review`} className="sidebar__link">
+                    <Link to={`${userPath}/review`} className={'sidebar__link'} onClick={closePopup}>
                         <span className="sidebar__icon"> {parse(`${icons.review}`)}</span>
                         <div className="sidebar__text">Оставить отзыв</div>
                     </Link>
@@ -37,29 +39,35 @@ const SideBar = () => {
 
                 {isAdmin && (
                     <>
-                        <li className={getClassname('roomsList')}>
-                            <Link to={`${userPath}/roomsList`} className="sidebar__link">
+                        <li className={getClassname('roomsList')} onClick={closePopup}>
+                            <Link to={`${userPath}/roomsList`} className={'sidebar__link'}>
                                 <span className="sidebar__icon"> {parse(`${icons.listRooms}`)}</span>
                                 <div className="sidebar__text">Статус номеров</div>
                             </Link>
                         </li>
                         <li className={getClassname('allBookings')}>
-                            <Link to={`${userPath}/allBookings`} className="sidebar__link">
+                            <Link to={`${userPath}/allBookings`} className={'sidebar__link'} onClick={closePopup}>
                                 <span className="sidebar__icon"> {parse(`${icons.allBookings}`)}</span>
                                 <div className="sidebar__text">Список бронирований</div>
                             </Link>
                         </li>
                     </>
                 )}
-                <li className="sidebar__item">
-                    <Link to="/" className="sidebar__link">
+                {!hideBackLink && <li className="sidebar__item" >
+                    <Link to="/" className={'sidebar__link'}>
                         <span className="sidebar__icon"> {parse(`${icons.toMainPage}`)}</span>
                         <div className="sidebar__text">Вернуться на главную</div>
                     </Link>
-                </li>
+                </li>}
             </ul>
         </div>
     );
 };
 
 export default SideBar;
+
+SideBar.propTypes = {
+    wrapperName: PropTypes.string,
+    hideBackLink: PropTypes.bool,
+    closePopup: PropTypes.func
+};

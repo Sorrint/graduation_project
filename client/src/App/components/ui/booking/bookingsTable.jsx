@@ -50,7 +50,7 @@ const BookingsTable = ({ bookings, sortBy, setSortBy, users, rooms, dispatch }) 
     const sortedBookings = _.orderBy(bookingData, [sortBy.path], [sortBy.order]);
 
     const columns = {
-        bookingNumber: { name: 'Номер брони', path: 'bookingNumber' },
+        bookingNumber: { name: '№', path: 'bookingNumber' },
         client: { name: 'Клиент', path: 'user' },
         room: { name: 'Комната', path: 'choosenNumberTitle' },
 

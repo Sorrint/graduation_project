@@ -8,10 +8,10 @@ import RoomImage from '../../common/room/roomImage';
 import RoomCard from '../../ui/room/roomCard';
 import RoomCardText from '../../common/room/roomCardText';
 import RoomCardPrice from '../../common/room/roomCardPrice';
-import { Link } from 'react-router-dom';
 import Header from '../../ui/header';
 import Banner from '../../ui/banner';
 import Loader from '../../common/loader';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 const RoomsListPage = () => {
     const rooms = useSelector(getRooms());
@@ -58,9 +58,9 @@ const RoomsListPage = () => {
             subName: 'button',
             path: '_id',
             component: ({ value, key }) => (
-                <Link to={`/booking/rooms/${value}`} className="room-card__button info-button" key={key}>
+                <NavLink to={`/booking/rooms/${value}`} className="room-card__button info-button" key={key}>
                     ПОДРОБНЕЕ
-                </Link>
+                </NavLink>
             )
         }
     };

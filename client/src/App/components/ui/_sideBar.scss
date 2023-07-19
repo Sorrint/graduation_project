@@ -1,5 +1,6 @@
 .sidebar {
-    grid-area: sidebar;
+    max-width: 210px;
+    width: 100%;
     border-left: 2px solid $mainColor;
     border-right: 2px solid $mainColor;
     display: flex;
@@ -41,6 +42,9 @@
         fill: #ffffff;
         stroke: #ffffff;
     }
+    &__burger {
+        border: none;
+    }
 }
 
 @keyframes hover-fill {
@@ -54,5 +58,28 @@
         fill: #ffffff;
         color: #ffffff;
         stroke: #ffffff;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .sidebar {
+        display: none;
+
+        &__burger {
+            display: block;
+        }
+    }
+}
+
+.burger {
+
+    &__item {
+        text-transform: uppercase;
+        border: none;
+        stroke: $mainColor;
+
+        &.active {
+            stroke: #fff;
+        }
     }
 }

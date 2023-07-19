@@ -37,7 +37,7 @@ const ReviewForm = () => {
     };
     return (
         <>
-            <div className="review__container">
+            <div className="reviews__form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <TextAreaField
                         rows={7}
@@ -47,8 +47,9 @@ const ReviewForm = () => {
                         placeholder="Введите сюда текст"
                         register={register('content', { ...validationSchema.review })}
                         error={errors.content?.message}
+                        displayLabel={false}
                     />
-                    <div className="review__button">
+                    <div className="reviews__button">
                         <button className="info-button" disabled={!isValid}>
                             Опубликовать
                         </button>
