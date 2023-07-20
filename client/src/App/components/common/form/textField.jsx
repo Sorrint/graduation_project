@@ -16,7 +16,7 @@ const TextField = ({ label, type, name, error, placeholder, register, formName, 
 
     return (<>
         <div className="input-container">
-            <label className="input-container__label" htmlFor={name}>
+            <label className={'input-container__label' + (formName ? ` label__${formName}` : '')} htmlFor={name}>
                 {label}
             </label>
             <div className="input-group has-validation">

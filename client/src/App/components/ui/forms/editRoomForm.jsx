@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '../../common/form/textField';
 import { useFieldArray, useForm } from 'react-hook-form';
@@ -68,7 +68,8 @@ const EditRoomForm = ({ room, showPopover }) => {
         register,
         handleSubmit,
         control,
-        formState: { errors, isValid }
+        formState: { errors, isValid },
+        watch
     } = useForm({
         mode: 'onChange',
         defaultValues: {
@@ -82,6 +83,13 @@ const EditRoomForm = ({ room, showPopover }) => {
             type: currentType.value
         }
     });
+
+    useEffect(() => {
+        const subscription = watch((value, { name, type }) =>
+          console.log(value, name, type)
+        );
+        return () => subscription.unsubscribe();
+      }, [watch]);
 
     const { fields } = useFieldArray({
         name: 'amenities',
@@ -97,8 +105,9 @@ const EditRoomForm = ({ room, showPopover }) => {
 
     return (
         <div className="edit-form">
-            <form className="form-container__form " onSubmit={handleSubmit(onSubmit)}>
+            <form className="form-container__form form-container__edit-room" onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="form-container__title">РЕДАКТИРОВАТЬ НОМЕР</h1>
+                <div className="pricelist__container">
                 <TextField
                     label="Номер"
                     type="text"
@@ -115,6 +124,7 @@ const EditRoomForm = ({ room, showPopover }) => {
                     name={'roomTypes'}
                     options={roomTypes}
                     defaultOption={'Выберите класс номера'}
+                    wrapperName={'room-types'}
                 />
                 <TextField
                     label="Название"
@@ -142,7 +152,9 @@ const EditRoomForm = ({ room, showPopover }) => {
                     placeholder="Описание"
                     register={register('description', { ...validationSchema.description })}
                     error={errors.description?.message}
+                    wrapperName={'room-types'}
                 />
+                </div>
                 <div className="pricelist__container">
                     <div className="pricelist__title">Прайс-лист (цены в рублях)</div>
                     <div className="pricelist__wrapper">
@@ -163,33 +175,36 @@ const EditRoomForm = ({ room, showPopover }) => {
                         ))}
                     </div>
                 </div>
-                <div className="input-container">
-                    <label>Удобства</label>
-                    <div className="check-inputs">
-                        {fields.map((field, index) => {
-                            return (
-                                <CheckBoxField
-                                    key={field._id}
-                                    name="amenities"
-                                    register={register(`amenities.${index}.value`, {
-                                        value: room.amenities.findIndex((a) => a === field._id) !== -1
-                                    })}
-                                >
-                                    {fields[index].text}
-                                </CheckBoxField>
-                            );
-                        })}
+                <div className="amenities__container">
+                    <div className="input-container">
+                        <label className='form-label_room-types'>Удобства</label>
+                        <div className="check-inputs">
+                            {fields.map((field, index) => {
+                                return (
+                                    <CheckBoxField
+                                        key={field._id}
+                                        name="amenities"
+                                        {...register(`amenities.${index}.value`, {
+                                            value: room.amenities.findIndex((a) => a === field._id) !== -1
+                                        })}
+                                    >
+                                        {fields[index].text}
+                                    </CheckBoxField>
+                                );
+                            })}
+                        </div>
                     </div>
+                    <TextAreaField
+                        rows={3}
+                        label="Прочие удобства"
+                        type="text"
+                        name="description"
+                        placeholder="Прочие удобства"
+                        register={register('otherAmenities')}
+                        error={errors.title?.message}
+                        wrapperName={'room-types'}
+                    />
                 </div>
-                <TextAreaField
-                    rows={3}
-                    label="Прочие удобства"
-                    type="text"
-                    name="description"
-                    placeholder="Прочие удобства"
-                    register={register('otherAmenities')}
-                    error={errors.title?.message}
-                />
                 <button className="info-button" disabled={!isValid}>
                     ОБНОВИТЬ ДАННЫЕ
                 </button>

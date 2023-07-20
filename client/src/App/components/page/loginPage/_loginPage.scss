@@ -40,6 +40,13 @@ button:focus {
     border-color: #ffffff;
 }
 
+.wrapper__login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
 .form-container {
     position: absolute;
     top: 0;
@@ -104,8 +111,6 @@ button:focus {
 .login-form,
 .signup-form {
     font-size: 20px;
-    margin: 0 auto;
-    margin-top: 50px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -228,7 +233,8 @@ button:focus {
         width: 100%;
         display: flex;
         padding: 0 10px;
-        margin-top: 0;
+        margin: 0;
+        z-index: 0;
     }
 
     .overlay-container {
@@ -246,8 +252,10 @@ button:focus {
         animation: show 0.6s;
     }
 
-    .form-container__button_form-type {
+    .form-container{
+        &__button_form-type {
         display: block;
+        }
     }
 }
 

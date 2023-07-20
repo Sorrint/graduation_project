@@ -5,8 +5,8 @@ import SelectField from '../../common/form/selectField';
 import Calendar from '../../common/form/calendar';
 import Counter from '../../common/form/counter';
 
-const BookingPanel = ({ onChange, data, roomTypes, control, onSubmit }) => {
-    const { bookingRange, viewOnLake, numberOfPersons } = data;
+const BookingPanel = ({ onChange, data, roomTypes, control, onSubmit, register }) => {
+    const { bookingRange, numberOfPersons } = data;
 
     return (
         <form className="form-container__form " onSubmit={onSubmit}>
@@ -36,9 +36,15 @@ const BookingPanel = ({ onChange, data, roomTypes, control, onSubmit }) => {
                     wrapperName="booking-panel"
                     label="Категория номера"
                 />
-                <CheckBoxField name="viewOnLake" onChange={onChange} value={viewOnLake}>
-                    Вид на озеро
-                </CheckBoxField>
+                <div className="panel-checkbox">
+                    <CheckBoxField
+                        name="viewOnLake"
+                        onChange={onChange}
+                        {...register('viewOnLake')}
+                        wrapperName="booking-panel">
+                        Вид на озеро
+                    </CheckBoxField>
+                </div>
             </div>
         </form>
     );
@@ -50,6 +56,7 @@ BookingPanel.propTypes = {
     roomTypes: PropTypes.array,
     setCountDays: PropTypes.func,
     control: PropTypes.object,
-    onSubmit: PropTypes.func
+    onSubmit: PropTypes.func,
+    register: PropTypes.func
 };
 export default BookingPanel;

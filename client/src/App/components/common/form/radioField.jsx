@@ -7,9 +7,9 @@ const RadioField = ({ name, label, register, options, value }) => {
             <label className="radio-container__title">{label}</label>
             <div className="radio-container__options">
                 {options.map((option) => (
-                    <div key={option.name + ' ' + option.value} className="form-check form-check-inline">
+                    <div key={option.name + ' ' + option.value} className="form-radio form-radio-inline">
                         <input
-                            className="form-check-input"
+                            className="form-radio-input"
                             type="radio"
                             name={name}
                             id={option.name + ' ' + option.value}
@@ -17,7 +17,7 @@ const RadioField = ({ name, label, register, options, value }) => {
                             value={option.name}
                             defaultChecked={option.name === value}
                         />
-                        <label className="form-check-label" htmlFor={option.name + ' ' + option.value}>
+                        <label className="form-radio-label" htmlFor={option.name + ' ' + option.value}>
                             {option.value}
                         </label>
                     </div>

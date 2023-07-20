@@ -479,6 +479,8 @@ input:focus {
   flex-direction: column;
 }
 .burger__link {
+  display: flex;
+  align-items: center;
   padding: 15px 0;
 }
 
@@ -914,6 +916,11 @@ button {
   font-size: 16px;
 }
 
+.panel-checkbox {
+  padding: 10px;
+  display: flex;
+}
+
 .booking-card {
   display: grid;
   margin: 10px;
@@ -955,6 +962,11 @@ button {
   font-weight: bold;
   display: grid;
   grid-auto-flow: column;
+}
+
+.form-label_booking-panel,
+.check-label_booking-panel {
+  font-size: 20px;
 }
 
 .booking-panel {
@@ -1062,6 +1074,9 @@ button {
     width: 100%;
     flex-grow: 1;
   }
+  .check-label_booking-panel {
+    font-size: 16px;
+  }
   .input-container_booking-panel {
     width: 100%;
   }
@@ -1076,6 +1091,10 @@ button {
   }
   .react-datepicker {
     left: -25px;
+  }
+  .panel-checkbox {
+    width: 100%;
+    justify-content: center;
   }
 }
 * {
@@ -1118,6 +1137,13 @@ button:focus {
   transition: transform 80ms ease-in;
   background-color: transparent;
   border-color: #ffffff;
+}
+
+.wrapper__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 .form-container {
@@ -1180,8 +1206,6 @@ button:focus {
 .login-form,
 .signup-form {
   font-size: 20px;
-  margin: 0 auto;
-  margin-top: 50px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1299,7 +1323,8 @@ button:focus {
     width: 100%;
     display: flex;
     padding: 0 10px;
-    margin-top: 0;
+    margin: 0;
+    z-index: 0;
   }
   .overlay-container {
     display: none;
@@ -1457,6 +1482,18 @@ button:focus {
     text-align: center;
   }
 }
+.form-check-label {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.96);
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 5px;
+}
+.form-check-label:hover {
+  background-color: var(--primary-active-color);
+}
+
 .dropdown {
   cursor: pointer;
 }
@@ -1598,14 +1635,6 @@ button:focus {
   }
   .reviews__button {
     justify-content: center;
-  }
-  .user-wrapper {
-    display: block;
-  }
-  .user-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
   .user__info {
     font-size: 20px;
@@ -1828,13 +1857,17 @@ button:focus {
   font-weight: bold;
 }
 
+.scroll-container {
+  max-width: 95vw;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
 .roomData-table,
 .bookings-table {
   display: inline-block;
   vertical-align: top;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
 }
 .roomData-table__header,
 .bookings-table__header {
@@ -1954,7 +1987,6 @@ button:focus {
   right: 0;
   bottom: 0;
   z-index: 100;
-  padding: 36px;
   box-sizing: border-box;
 }
 
@@ -2081,6 +2113,14 @@ button:focus {
     flex-wrap: wrap;
   }
 }
+.content__about-page {
+  margin: 0;
+  padding: 40px;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: justify;
+}
+
 .popup__booking {
   display: flex;
   flex-direction: column;
@@ -2213,6 +2253,33 @@ button:focus {
   align-items: center;
 }
 
+@media screen and (max-width: 540px) {
+  .booking-card__record {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .popup__booking-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+  }
+  .popup__button-group {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 370px) {
+  .booking-card__record {
+    gap: 0;
+  }
+  .popup__booking-card {
+    font-size: 18px;
+  }
+}
 .room-status__free {
   padding: 10px 5px;
   background-color: #04ca04;
@@ -2245,14 +2312,7 @@ button:focus {
 .check-inputs {
   display: flex;
   flex-wrap: wrap;
-}
-
-.form-check {
-  margin: 5px;
-}
-.form-check-label {
-  padding: 5px;
-  pointer-events: none;
+  gap: 10px;
 }
 
 .form-select__roomTypes {
@@ -2262,6 +2322,17 @@ button:focus {
   padding: 12px 0 12px 15px;
   border: 1px solid rgb(165, 165, 165);
   border-radius: 5px;
+}
+
+.form-label_room-types {
+  max-width: 80px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.label__edit-form {
+  max-width: 80px;
+  width: 100%;
 }
 
 .pricelist__container {
@@ -2283,11 +2354,11 @@ button:focus {
   color: #337ab7;
   position: absolute;
   z-index: 2;
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   font-size: 50px;
   line-height: 1;
-  top: -5px;
-  left: 6px;
+  top: 50%;
+  left: 50%;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
 }
 
@@ -2310,8 +2381,15 @@ button:focus {
 }
 
 .close-button:hover:before {
-  transform: scale(0.8) rotate(45deg);
   color: #fff;
+}
+
+.form-container__edit-room {
+  gap: 20px;
+}
+
+.popup__edit-room {
+  padding: 36px 10px;
 }
 
 .remove-button {
@@ -2341,6 +2419,20 @@ button:focus {
   transform: rotate(45deg);
 }
 
+@media screen and (max-width: 540px) {
+  .close-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .close-button::before {
+    font-size: 36px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
 .reviews-content {
   display: flex;
   flex-direction: column;

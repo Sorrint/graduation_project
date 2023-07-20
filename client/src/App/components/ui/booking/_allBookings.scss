@@ -28,13 +28,19 @@
         font-weight: bold;
     }
 }
+
+.scroll-container {
+    max-width: 95vw;
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
 .roomData-table,
 .bookings-table {
     display: inline-block;
 	vertical-align: top;
-	overflow-x: auto;
-	white-space: nowrap;
-	-webkit-overflow-scrolling: touch;
+
 
     &__header {
         height: 50px;

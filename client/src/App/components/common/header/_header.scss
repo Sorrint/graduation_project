@@ -153,6 +153,9 @@
         flex-direction: column;
     }
     &__link {
+        display: flex;
+        align-items: center;
+        
         padding: 15px 0;
     }
 }
