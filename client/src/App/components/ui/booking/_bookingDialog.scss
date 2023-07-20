@@ -138,3 +138,44 @@
         align-items: center;
     }
 }
+
+
+@media screen and (max-width: 540px) {
+    .booking-card {
+        &__record {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+
+    .popup {
+        &__booking-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 20px;
+        }
+
+        &__button-group {
+            display: flex;
+            align-self: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+    }   
+}
+
+
+@media screen and (max-width: 370px) {
+    .booking-card {
+        &__record {
+            gap: 0;
+        }
+    }
+    .popup {
+        &__booking-card {
+            font-size: 18px;
+        }
+    }
+}

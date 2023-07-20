@@ -104,12 +104,6 @@ input:focus {
     justify-content: space-between;
     padding-bottom: 20px;
 
-    // p {
-    //     padding: 40px;
-    //     font-size: 20px;
-    //     line-height: 27px;
-    //     text-align: justify;
-    // }
 }
 
 .booking {
@@ -309,6 +303,8 @@ input:focus {
 @import "../App/components/page/bookingPage/_booking";
 @import "../App/components/page/loginPage/_loginPage";
 @import "../App/components/common/form/_form";
+@import "../App/components/common/form/_checkbox";
+
 @import "../App/components/ui/_navProfile";
 @import "../App/components/page/userPage/_userPage";
 @import "../App/components/ui/_sideBar";
@@ -316,6 +312,7 @@ input:focus {
 @import "../App/components/ui/booking/_allBookings";
 @import "../App/components/common/portal/_portal";
 @import "../App/components/page/roomPage/_roomPage";
+@import "../App/components/page/aboutPage/_aboutPage";
 @import "../App/components/ui/booking/_bookingDialog";
 @import "../App/components/common/room/_roomStatus";
 @import "../App/components/ui/_editRoom";

@@ -42,14 +42,16 @@ const RoomsList = () => {
     return (
         <div className="admin-panel">
             <h1 className="admin-panel__title">Статус номеров</h1>
-            <RoomsTable
-                onSelect={handleSelect}
-                rooms={rooms}
-                sortBy={sortBy}
-                setSortBy={setSortBy}
-                currentUserId={currentUserId}
-            />
-            <OverlayingPopup isOpened={active} onClose={showPopup}>
+            <div className="scroll-container">
+                <RoomsTable
+                    onSelect={handleSelect}
+                    rooms={rooms}
+                    sortBy={sortBy}
+                    setSortBy={setSortBy}
+                    currentUserId={currentUserId}
+                />
+            </div>
+            <OverlayingPopup isOpened={active} onClose={showPopup} wrapperName={'edit-room'}>
                 <div className="admin-panel__content">
                     <button className="close-button" onClick={showPopup} />
                     <EditRoomForm room={selectedRoom} showPopover={() => setShowPopover(true)} />

@@ -1,0 +1,15 @@
+
+.form-check-label {
+    cursor: pointer;
+    color: rgba(0,0,0,0.96);
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    gap: 5px;
+
+    &:hover {
+        background-color: var(--primary-active-color);
+    }
+}
+
+

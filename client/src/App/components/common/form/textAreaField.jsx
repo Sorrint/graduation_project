@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextAreaField = ({ label, name, error, placeholder, rows = 2, register, displayLabel = true }) => {
+const TextAreaField = ({ label, name, error, placeholder, rows = 2, register, displayLabel = true, wrapperName }) => {
     const getInputClasses = () => {
         return 'input-container__input' + (error ? ' is-invalid' : '');
     };
     return (
         <>
             <div className="input-container">
-                {displayLabel && <label htmlFor={name} className="form-label">
+                {displayLabel && <label htmlFor={name} className={'form-label' + (wrapperName ? ` form-label_${wrapperName}` : '')}>
                     {label}
                 </label>}
                 <textarea
@@ -35,5 +35,6 @@ TextAreaField.propTypes = {
     register: PropTypes.object,
     rows: PropTypes.number,
     value: PropTypes.string,
-    displayLabel: PropTypes.bool
+    displayLabel: PropTypes.bool,
+    wrapperName: PropTypes.string
 };

@@ -56,21 +56,23 @@ const BookingsList = () => {
     return (
         <div className="admin-panel">
             <h1 className="admin-panel__title">Список бронирований</h1>
-            <BookingsTableSettings
-                setUser={(target) => setSelectedUser(target.value)}
-                setRoom={(target) => setSelectedRoom(target.value)}
-                selectedRoom={selectedRoom}
-                users={users}
-                rooms={rooms}
-            />
-            <BookingsTable
-                bookings={itemsCrop}
-                sortBy={sortBy}
-                setSortBy={setSortBy}
-                users={users}
-                rooms={rooms}
-                dispatch={dispatch}
-            />
+            <div className="scroll-container">
+                <BookingsTableSettings
+                    setUser={(target) => setSelectedUser(target.value)}
+                    setRoom={(target) => setSelectedRoom(target.value)}
+                    selectedRoom={selectedRoom}
+                    users={users}
+                    rooms={rooms}
+                />
+                <BookingsTable
+                    bookings={itemsCrop}
+                    sortBy={sortBy}
+                    setSortBy={setSortBy}
+                    users={users}
+                    rooms={rooms}
+                    dispatch={dispatch}
+                />
+            </div>
             {count > 0 && (
                 <div className="pagination__container">
                     <Pagination

@@ -1,31 +1,34 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CheckBoxField = ({ name, value, onChange, children, error, register }) => {
-    const handleChange = () => {
-        onChange({ name, value: !value });
-    };
+const CheckBoxField = forwardRef(function CheckBoxField({ name, onChange, children, error, disabled = false, wrapperName }, ref) {
     const getInputClasses = () => {
-        return 'form-check-input' + (error ? ' is-invalid' : '');
+        return 'form-check-input' + (disabled ? 'form-check-input-disabled' : '');
     };
 
+    console.log(name);
     return (
-        <div className="form-check">
-            <input className={getInputClasses()} type="checkbox" id={name} onChange={handleChange} {...register} />
-            <label className="form-check-label" htmlFor={name}>
-                {children}
+        <>
+            <label className={'form-check-label' + (wrapperName ? ` check-label_${wrapperName}` : '')} >
+                <input
+                    className={getInputClasses()}
+                    type="checkbox"
+                    onChange={onChange}
+                    name={name}
+                    ref={ref}
+                    disabled={disabled}/>
+                    {children}
             </label>
-            {error && <div className="invalid-feedback">{error}</div>}
-        </div>
+        </>
     );
-};
+});
 
 CheckBoxField.propTypes = {
     name: PropTypes.string,
-    value: PropTypes.bool,
     onChange: PropTypes.func,
     children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
     error: PropTypes.string,
-    register: PropTypes.object
+    disabled: PropTypes.bool,
+    wrapperName: PropTypes.string
 };
 export default CheckBoxField;

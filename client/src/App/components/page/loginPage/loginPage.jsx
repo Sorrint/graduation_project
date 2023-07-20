@@ -18,7 +18,7 @@ const LoginPage = () => {
     return (
         <>
             <Header />
-            <div className="wrapper">
+            <div className="wrapper wrapper__login">
                 <div className={formName(formType)}>
                     <LoginForm setType={handleClick}/>
                     <RegisterForm setType={handleClick}/>
