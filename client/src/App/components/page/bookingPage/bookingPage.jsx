@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { getToday, getTomorrow } from '../../../utils/utils';
 import BookingPanel from '../../ui/booking/bookingPanel';
 import { useDispatch, useSelector } from 'react-redux';
@@ -52,19 +52,12 @@ const BookingPage = () => {
     const [active, setActive] = useState(false);
     const [, setReferenceElement] = useState(null);
     const [showPopover, setShowPopover] = useState(false);
-    const { register, handleSubmit, setValue, control, getValues, watch } = useForm({
+    const { register, handleSubmit, setValue, control, getValues } = useForm({
         mode: 'onChange',
         defaultValues: {
             ...initialData
         }
     });
-
-    useEffect(() => {
-        const subscription = watch((value, { name, type }) =>
-          console.log(value, name, type)
-        );
-        return () => subscription.unsubscribe();
-      }, [watch]);
 
     const [data, setData] = useState(getValues());
 

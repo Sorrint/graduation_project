@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '../../common/form/textField';
 import { useFieldArray, useForm } from 'react-hook-form';
@@ -68,8 +68,7 @@ const EditRoomForm = ({ room, showPopover }) => {
         register,
         handleSubmit,
         control,
-        formState: { errors, isValid },
-        watch
+        formState: { errors, isValid }
     } = useForm({
         mode: 'onChange',
         defaultValues: {
@@ -83,13 +82,6 @@ const EditRoomForm = ({ room, showPopover }) => {
             type: currentType.value
         }
     });
-
-    useEffect(() => {
-        const subscription = watch((value, { name, type }) =>
-          console.log(value, name, type)
-        );
-        return () => subscription.unsubscribe();
-      }, [watch]);
 
     const { fields } = useFieldArray({
         name: 'amenities',
@@ -106,7 +98,7 @@ const EditRoomForm = ({ room, showPopover }) => {
     return (
         <div className="edit-form">
             <form className="form-container__form form-container__edit-room" onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="form-container__title">РЕДАКТИРОВАТЬ НОМЕР</h1>
+                <h2 className="form-container__title">РЕДАКТИРОВАТЬ НОМЕР</h2>
                 <div className="pricelist__container">
                 <TextField
                     label="Номер"

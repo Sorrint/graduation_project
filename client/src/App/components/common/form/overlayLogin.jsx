@@ -11,14 +11,14 @@ const OverlayLogin = ({ setType }) => {
         <div className="overlay-container">
             <div className="overlay">
                 <div className="overlay-panel overlay-left">
-                    <h1>Вход</h1>
+                    <h2>Вход</h2>
                     <p>Для тех, у кого есть аккаунт</p>
                     <button className="overlay__button" id="signIn" onClick={showSignInForm}>
                         Войти
                     </button>
                 </div>
                 <div className="overlay-panel overlay-right">
-                    <h1>Регистрация</h1>
+                    <h2>Регистрация</h2>
                     <p>Если у вас еще нет аккаунта, то можете</p>
                     <button className="overlay__button" id="signUp" onClick={showSignUpForm}>
                         Зарегистрироваться

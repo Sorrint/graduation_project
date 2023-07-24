@@ -7,9 +7,10 @@
     font-size: 16px;
     padding: 0 50px;
     background-color: lightblue;
+    gap: 16px;
 
-    &__whitespace {
-        flex: 1 1 auto;
+    &__info {
+        flex-grow: 1;
     }
 
     &__github {
@@ -23,5 +24,11 @@
 
     &__icon {
         padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__info {
+        display: none;
     }
 }

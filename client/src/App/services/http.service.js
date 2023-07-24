@@ -23,7 +23,6 @@ http.interceptors.request.use(
         return config;
     },
     function (error) {
-        console.log(error);
         return Promise.reject(error);
     }
 );

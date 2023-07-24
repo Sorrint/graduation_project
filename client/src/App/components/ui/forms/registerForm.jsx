@@ -46,37 +46,44 @@ const RegisterForm = ({ setType }) => {
     return (
         <div className="form-container sign-up-container">
             <form className="form-container__form " onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="form-container__title">РЕГИСТРАЦИЯ</h1>
+                <h2 className="form-container__title">РЕГИСТРАЦИЯ</h2>
                 <div className='form-container__fields'>
                     <TextField
-                    label="Имя"
-                    type="text"
-                    name="username"
-                    placeholder="имя"
-                    register={register('username', { ...validationSchema.username })}
-                    error={errors.username?.message}
+                        label="Имя"
+                        type="text"
+                        name="username"
+                        placeholder="имя"
+                        register={register('username', { ...validationSchema.username })}
+                        error={errors.username?.message}
                     />
                     <TextField
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    label="E-mail"
-                    register={register('email', { ...validationSchema.email })}
-                    formName={formName}
-                    error={errors.email?.message}
-                    autoComplete="new-password"
+                        type="email"
+                        name="email"
+                        placeholder="email"
+                        label="E-mail"
+                        register={register('email', { ...validationSchema.email })}
+                        formName={formName}
+                        error={errors.email?.message}
+                        autoComplete="new-password"
                     />
                     <TextField
-                    label="Пароль"
-                    type="password"
-                    name="password"
-                    placeholder="пароль"
-                    register={register('password', { ...validationSchema.password })}
-                    formName={formName}
-                    error={errors.password?.message}
-                    autoComplete="new-password"
+                        label="Пароль"
+                        type="password"
+                        name="password"
+                        placeholder="пароль"
+                        register={register('password', { ...validationSchema.password })}
+                        formName={formName}
+                        error={errors.password?.message}
+                        autoComplete="new-password"
                     />
-                    <RadioField label="Пол" name="sex" register={register} options={gender} value="male" />
+                    <RadioField
+                        label="Пол"
+                        name="sex"
+                        register={register}
+                        options={gender}
+                        value="male"
+                        wrapperName={formName}
+                    />
                     <Avatar
                         name="avatar"
                         label="Аватар"

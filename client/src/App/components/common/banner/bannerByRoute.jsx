@@ -22,7 +22,7 @@ const BannerByRoute = () => {
                         <div className={`banner${banner.className}`}>
                             <div className="banner__filter">
                                 <div className="banner__title">
-                                    <h1 className="banner__text">{banner.name}</h1>
+                                    <h2 className="banner__text">{banner.name}</h2>
                                 </div>
                             </div>
                         </div>

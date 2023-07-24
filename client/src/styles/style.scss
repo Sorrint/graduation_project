@@ -230,24 +230,24 @@ input:focus {
     stroke-width: 2;
     &_abs {
         position: absolute;
-        align-self: flex-end;
-        justify-self: end;
+        top: 0;
+        right: -40px;
     }
 }
 
 .back-button {
-    grid-area: button;
+    align-self: start;
     height: 4vh;
-    align-self: end;
-    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $mainColor;
+    text-align: center;
     stroke: $borderColor;
     max-width: 150px;
     border-radius: 5px;
     padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .loader {
@@ -282,6 +282,12 @@ input:focus {
     animation: animloader 1s ease infinite;
 }
 
+@media screen and (max-width: 320px) {
+    .back-button {
+        align-self: center;
+    }
+}
+
 @keyframes animloader {
     0% {
         box-shadow: 2px 0px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0.3), 20px 0px rgba(255, 255, 255, 0);
@@ -303,7 +309,6 @@ input:focus {
 @import "../App/components/page/bookingPage/_booking";
 @import "../App/components/page/loginPage/_loginPage";
 @import "../App/components/common/form/_form";
-@import "../App/components/common/form/_checkbox";
 
 @import "../App/components/ui/_navProfile";
 @import "../App/components/page/userPage/_userPage";

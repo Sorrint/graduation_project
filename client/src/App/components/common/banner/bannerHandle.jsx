@@ -7,7 +7,7 @@ const BannerHandle = ({ name, text }) => {
                 <div className={`banner${name}`}>
                     <div className="banner__filter">
                         <div className="banner__title">
-                            <h1 className="banner__text">{text}</h1>
+                            <h2 className="banner__text">{text}</h2>
                         </div>
                     </div>
                 </div>

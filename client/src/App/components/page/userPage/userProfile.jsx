@@ -24,12 +24,11 @@ const UserProfile = () => {
             <div className="content user-content">
                 <div className="user__card">
                     <div className="user__info">
-                        <Link className="user__edit" to={`/booking/users/${userId}/edit`}>
-                            <div className="edit-button_abs">{parse(icons.edit)}</div>
-                        </Link>
-
                         <div className="user__avatar">
                             <img src={currentUser.avatar} alt="Аватарка" />
+                            <Link className="user__edit" to={`/booking/users/${userId}/edit`}>
+                                <div className="edit-button_abs">{parse(icons.edit)}</div>
+                            </Link>
                         </div>
                         <div className="user__username">Имя пользователя: {currentUser.username}</div>
                         <div className="user__email">email: {currentUser.email}</div>

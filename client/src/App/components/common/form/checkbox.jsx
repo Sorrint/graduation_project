@@ -1,15 +1,14 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CheckBoxField = forwardRef(function CheckBoxField({ name, onChange, children, error, disabled = false, wrapperName }, ref) {
+const CheckBoxField = forwardRef(function CheckBoxField({ name, onChange, children, disabled = false, wrapperName }, ref) {
     const getInputClasses = () => {
-        return 'form-check-input' + (disabled ? 'form-check-input-disabled' : '');
+        return 'check-input' + (disabled ? 'check-input-disabled' : '');
     };
 
-    console.log(name);
     return (
         <>
-            <label className={'form-check-label' + (wrapperName ? ` check-label_${wrapperName}` : '')} >
+            <label className={'check-label' + (wrapperName ? ` check-label_${wrapperName}` : '')} >
                 <input
                     className={getInputClasses()}
                     type="checkbox"
