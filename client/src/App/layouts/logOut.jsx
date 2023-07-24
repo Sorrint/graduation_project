@@ -7,7 +7,7 @@ const LogOut = () => {
     useEffect(() => {
         dispatch(logOut());
     }, []);
-    return <h1>Loading</h1>;
+    return <h2>Loading</h2>;
 };
 
 export default LogOut;

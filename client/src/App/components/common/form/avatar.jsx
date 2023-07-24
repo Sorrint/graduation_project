@@ -16,23 +16,23 @@ const Avatar = ({ name, label, value, register, setValue }) => {
 
     if (avatar) {
         return (
-            <div className="avatar-container">
-                <label className="avatar-container__label" htmlFor={name}>
+            <div className="input-container">
+                <label className="input-container__label" htmlFor={name}>
                     {label}
                 </label>
 
-                <div className="avatar-container__group">
-                    <img src={avatar} className="avatar-container__image" alt="" height="40" />
+                <div className="avatar__group">
+                    <img src={avatar} className="avatar__image" alt="" height="40" />
                     <input
                         type="text"
                         id={name}
                         value={avatar}
                         name={name}
-                        className="avatar-container__input"
+                        className="avatar__input"
                         {...register(name)}
                     />
-                    <button className="avatar-button" onClick={changeAvatar}>
-                        Сменить аватар
+                    <button className="info-button avatar-button" onClick={changeAvatar}>
+                        Сменить
                     </button>
                 </div>
             </div>

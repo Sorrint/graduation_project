@@ -7,7 +7,7 @@ const BackHistoryButton = () => {
     const history = useHistory();
 
     return (
-        <button className="back-button" onClick={() => history.goBack()}>
+        <button className="info-button back-button" onClick={() => history.goBack()}>
             <i>{parse(icons.leftArrow)}</i>
             Вернуться
         </button>

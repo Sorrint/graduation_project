@@ -55,7 +55,7 @@ const BookingsList = () => {
     }
     return (
         <div className="admin-panel">
-            <h1 className="admin-panel__title">Список бронирований</h1>
+            <h2 className="admin-panel__title">Список бронирований</h2>
             <div className="scroll-container">
                 <BookingsTableSettings
                     setUser={(target) => setSelectedUser(target.value)}

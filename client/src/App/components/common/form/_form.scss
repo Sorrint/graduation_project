@@ -36,26 +36,21 @@
     }
 }
 
-.avatar-container {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    margin: 8px 0;
-    height: 60px;
-    width: 100%;
-    align-items: center;
-
+.avatar {
     &__group {
-        display: grid;
-        grid-template-columns: 4fr 2fr;
-        justify-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &__image {
-        background-color: #3ac4fa;
-        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
         height: 60px;
-        border: 1px solid #1e11a9;
     }
 
     &__label {
@@ -74,33 +69,36 @@
     font-weight: bold;
 }
 .avatar-button {
-    background-color: rgba(56, 195, 250, 0.7);
-    border-radius: 3px;
-}
-
-.radio-container {
     font-size: 16px;
-    display: grid;
-    margin: 8px 0;
-    grid-template-columns: 2fr 5fr;
-    width: 100%;
-    height: 40px;
-    align-items: center;
-
-    &__options {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: center;
-        justify-items: center;
-        justify-content: space-between;
-    }
+    padding: 8px;
+    margin-left: auto;
 }
-.input-group {
+
+.input-group,
+.radio-group {
     display: flex;
     width: 100%;
     align-items: center;
     margin-left: 10px;
+}
+
+.check-label,
+.radio-label {
+    cursor: pointer;
+    color: rgba(0,0,0,0.96);
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    gap: 5px;
+
+    &:hover {
+        background-color: var(--primary-active-color);
+    }
+}
+
+.radio-group {
+    gap: 16px;
+    font-size: 16px;
 }
 
 .form-control {
@@ -121,6 +119,9 @@
     text-align: center;
 }
 
+@media screen and (max-width: 320px) {
+
+}
 
 @media screen and (max-width: 320px) {
     .input-container {
@@ -128,5 +129,18 @@
         gap: 20px;
         width: 100%;
         text-align: center;
+    }
+
+    .avatar {
+        &__group {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        &-button {
+            align-self: center;
+            margin: 0;
+        }
     }
 }

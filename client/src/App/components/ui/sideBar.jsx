@@ -3,12 +3,14 @@ import { useSelector } from 'react-redux';
 import { getCurrentUserData, getCurrentUserId } from '../../store/users';
 import parse from 'html-react-parser';
 import { icons } from '../../api/icons';
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom/cjs/react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { routesPrefix } from '../../routes';
 
 const SideBar = ({ wrapperName, hideBackLink = false, closePopup }) => {
     const { route } = useParams();
+    const location = useLocation();
+    const currentPath = location.pathname;
     const getClassname = (text) => ('sidebar__item ' + (wrapperName ? ` ${wrapperName}__item` : '') + (text === route ? ' active' : ''));
     const currentUser = useSelector(getCurrentUserData());
     const currentUserId = useSelector(getCurrentUserId());
@@ -19,7 +21,7 @@ const SideBar = ({ wrapperName, hideBackLink = false, closePopup }) => {
         {currentUser &&
             (<div className={'sidebar' + (wrapperName ? ` sidebar__${wrapperName}` : '')}>
                 <ul className='sidebar__links'>
-                    {wrapperName && (<li className={getClassname('booking')} onClick={closePopup}><Link to="/booking/booking" className={`${wrapperName}__link`} role="button">
+                    {wrapperName && (<li className={`${wrapperName}__item` + (currentPath === `${routesPrefix}/booking` ? ` active` : '')} onClick={closePopup}><Link to="/booking/booking" className={`${wrapperName}__link`} role="button">
                         ЗАБРОНИРОВАТЬ НОМЕР
                     </Link></li>)}
                     <li className={getClassname('profile')} onClick={closePopup}>

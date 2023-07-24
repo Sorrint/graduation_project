@@ -97,15 +97,18 @@ button:focus {
     }
     &__title {
         font-weight: bold;
-        margin: 10px 0;
+        padding: 10px 0;
+        
     }
     &__user-edit {
-        display: grid;
-        grid-template-areas:
-            "button"
-            "form";
-        grid-template-rows: 1fr 8fr;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
     }
+}
+
+.user-edit__field {
+    width: 400px;
 }
 
 .login-form,
@@ -256,6 +259,13 @@ button:focus {
         &__button_form-type {
         display: block;
         }
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .user-edit__field {
+        width: 100%;
     }
 }
 

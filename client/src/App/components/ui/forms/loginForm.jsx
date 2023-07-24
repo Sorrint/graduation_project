@@ -34,7 +34,7 @@ const LoginForm = ({ setType }) => {
     return (
         <div className="form-container sign-in-container">
             <form className="form-container__form" onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="form-container__title">ВХОД</h1>
+                <h2 className="form-container__title">ВХОД</h2>
                 <div className='form-container__fields'>
                     <TextField
                     type="email"

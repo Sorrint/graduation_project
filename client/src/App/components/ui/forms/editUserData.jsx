@@ -52,28 +52,29 @@ const EditUserData = () => {
             <div className="form-container__user-edit">
                 <BackHistoryButton />
                 <form className="form-container__form " onSubmit={handleSubmit(onSubmit)}>
-                    <h1 className="form-container__title">РЕДАКТИРОВАТЬ ПРОФИЛЬ</h1>
-                    <TextField
-                        label="Имя"
-                        type="text"
-                        name="username"
-                        placeholder="имя"
-                        register={register('username', { ...validationSchema.username })}
-                        error={errors.username?.message}
-                    />
-                    <TextField
-                        type="email"
-                        name="email"
-                        placeholder="email"
-                        label="E-mail"
-                        register={register('email', { ...validationSchema.email })}
-                        formName={formName}
-                        error={errors.email?.message}
-                        autoComplete="new-password"
-                    />
-
-                    <RadioField label="Пол" name="sex" register={register} options={gender} value={sex} />
-                    <Avatar name="avatar" label="Аватар" value={avatar} register={register} setValue={setValue} />
+                    <h2 className="form-container__title">РЕДАКТИРОВАТЬ ПРОФИЛЬ</h2>
+                    <div className="form-container__field user-edit__field">
+                        <TextField
+                            label="Имя"
+                            type="text"
+                            name="username"
+                            placeholder="имя"
+                            register={register('username', { ...validationSchema.username })}
+                            error={errors.username?.message}
+                        />
+                        <TextField
+                            type="email"
+                            name="email"
+                            placeholder="email"
+                            label="E-mail"
+                            register={register('email', { ...validationSchema.email })}
+                            formName={formName}
+                            error={errors.email?.message}
+                            autoComplete="new-password"
+                        />
+                        <RadioField label="Пол" name="sex" register={register} options={gender} value={sex} />
+                        <Avatar name="avatar" label="Аватар" value={avatar} register={register} setValue={setValue} />
+                    </div>
                     <button className="form-container__button">ОБНОВИТЬ</button>
                 </form>
             </div>

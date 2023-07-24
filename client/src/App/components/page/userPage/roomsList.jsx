@@ -41,7 +41,7 @@ const RoomsList = () => {
     }
     return (
         <div className="admin-panel">
-            <h1 className="admin-panel__title">Статус номеров</h1>
+            <h2 className="admin-panel__title">Статус номеров</h2>
             <div className="scroll-container">
                 <RoomsTable
                     onSelect={handleSelect}

@@ -72,13 +72,15 @@
 }
 
 .burger {
-
     &__item {
         text-transform: uppercase;
         border: none;
         stroke: $mainColor;
+        padding-left: 16px;
 
         &.active {
+            background-color: $mainColor;
+            color: #fff;
             stroke: #fff;
         }
     }
